@@ -3,6 +3,15 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const path = require('path');
+let bodyParser = ('body-parser');
+let port = process.env.PORT || 3000;
+/************************************************
+/     Put your name in this let       *
+************************************************/
+let name = 'sassankermani';
+let Sequelize = require('sequelize');
+let sequelize = new Sequelize('postgres://' + name + '@localhost:5432/dnddatabase');
+
 
 if(!process.env.DYNO) {
     app.use(function(req, res, next) {
@@ -20,21 +29,15 @@ app.use(express.static(__dirname + '/dist'));
     res.sendFile(path.join(__dirname + '/dist/index.html'));
   });
 
-/************************************************
-/			Put your name in this let 			*
-************************************************/
-let name = 'sassankermani';
+
 
 //set up for app
 //let express = require('express');
 //let app = express();
-//let bodyParser = ('body-parser');
-let port = process.env.PORT || 3000;
-//let Sequelize = require('sequelize');
-let sequelize = new Sequelize('postgres://' + name + '@localhost:5432/dnddatabase');
+
 
 //app using stuff
-app.use(bodyParser());
+//app.use(bodyParser.json());
 
 //basic rout
 app.get('/', function(req, res){
