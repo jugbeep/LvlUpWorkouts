@@ -1,14 +1,30 @@
 let express = require('express');
 let router = express.Router();
 
-//user tabel
+//controlers for stuff
+let userTabelController = require('../controllers/userTabel.js');
 
+/************************************
+*		routs for user tabel 		*
+************************************/
+//send all stuff
+router.get('/api/userTabel', userTabelController.sendAll);
 
+//get by id
+router.get('/api/userTabel/:id', userTabelController.sendOne);
 
-//workout activitys 
+//post rout/ creat new user
+router.post('api/userTabel', userTabelController.create);
 
+//update rout/ update user information
+router.put('api/userTabel', userTabelController.update);
 
+//delete rout/ delet user
+router.delete('api/userTabel', userTabelController.destroy);
 
-//workout session
+/************************************************
+*			routs for workout activitys			*
+************************************************/
+
 
 
