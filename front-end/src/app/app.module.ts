@@ -12,9 +12,10 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './homepage/homepage.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import { LoginComponent } from './login/login.component';
-import { EmailComponent } from './email/email.component';
-import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './auth/login/login.component';
+import { EmailComponent } from './auth/email/email.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { AuthComponent } from './auth/auth.component';
 
 
 export const firebaseConfig = {
@@ -31,7 +32,8 @@ export const firebaseConfig = {
     HomeComponent,
     LoginComponent,
     EmailComponent,
-    SignupComponent
+    SignupComponent,
+    AuthComponent
 
   ],
   imports: [
