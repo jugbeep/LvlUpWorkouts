@@ -16,6 +16,8 @@ import { LoginComponent } from './auth/login/login.component';
 import { EmailComponent } from './auth/email/email.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { AuthComponent } from './auth/auth.component';
+import { MonsterComponent } from './monster/monster.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 export const firebaseConfig = {
@@ -33,7 +35,9 @@ export const firebaseConfig = {
     LoginComponent,
     EmailComponent,
     SignupComponent,
-    AuthComponent
+    AuthComponent,
+    MonsterComponent,
+    PageNotFoundComponent
 
   ],
   imports: [
