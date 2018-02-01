@@ -16,6 +16,14 @@ let user = sequelize.import('./user');
 let workout = sequelize.import('./workout');
 let workoutactivity.import('./workoutactivity')
 
+//relationships
+workout.belongsTo(user);
+user.hasMany(workout);
+
+workoutactivity.belongsTo(user);
+user.hasMany(workoutactivity);
+
+
 //exports moduels
 module.exports = {
 	user : user
