@@ -1,18 +1,27 @@
+//for heroku
 require('dotenv').config();
 
+//basic requires
 const express = require('express');
 const app = express();
 const path = require('path');
-let bodyParser = ('body-parser');
-let port = process.env.PORT || 3000;
-/************************************************
-/     Put your name in this let       *
-************************************************/
-let name = 'sassankermani';
+const bodyParser = ('body-parser');
 let Sequelize = require('sequelize');
+
+/******************************************
+/     Put your name in this let           *
+******************************************/
+let name = 'sassankermani';
+
 let sequelize = new Sequelize('postgres://' + name + '@localhost:5432/dnddatabase');
 
+const port = process.env.PORT || 3000;
 
+//app.use set up
+//app.use(bodyParser.json());
+
+
+//for heroku
 if(!process.env.DYNO) {
     app.use(function(req, res, next) {
       res.header("Access-Control-Allow-Origin", "http://localhost:4200");
@@ -23,28 +32,17 @@ if(!process.env.DYNO) {
     });
   }
 
-app.use(express.static(__dirname + '/dist'));
+//for huroku / anguler
+app.use(express.static(__dirname + "/" /* + '/dist') */ ));
 
-  app.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname + '/dist/index.html'));
-  });
-
-
-
-//set up for app
-//let express = require('express');
-//let app = express();
+// app.get('/*', function(req, res) {
+//   res.sendFile(path.join(__dirname + '/dist/index.html'));
+// });
 
 
-//app using stuff
-//app.use(bodyParser.json());
-
-//basic rout
-app.get('/', function(req, res){
-
-	res.send('Yo you did a thing yo');
-});
-
+//router
+let router = require('./config/routes.js')
+app.use(router);
 
 
 //listener

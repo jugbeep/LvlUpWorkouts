@@ -20,7 +20,7 @@ Contributors:
 Patrick Botkins https://github.com/jugbeep
 Kevin James https://github.com/trumpetcoder
 Laura Johnson https://github.com/nemazeelaura
-Sassan 
+Sassan https://github.com/sassankermani
 
 ************************RPG-UpFit******************************************
 
@@ -91,7 +91,7 @@ Javascript
 
 BACK END:
 Node and Express
-MySQL for database
+Postgress for database
 Jasmine for testing
 
 
