@@ -1,12 +1,20 @@
+console.log('some stuff');
+
 //set up
 let express = require('express');
 let router = express.Router();
 
 //controlers for stuff
 let userTabelController = require('../controllers/userTabel.js');
-let workOutActivities  require('../controllers/workOutActivitiesTabel.js');
+let workOutActivities = require('../controllers/workOutActivitiesTabel.js');
 let individualWorkouts = require('../controllers/individualWorkoutsTavel.js')
 
+
+//test
+// router.get('/', function(req, res){
+// 	console.log("better test")
+// 	res.send('bettr test');
+// });
 
 /************************************
 *		routs for user tabel 		*
@@ -65,8 +73,8 @@ router.put('api/individualWorkoutsTabel', individualWorkouts.update);
 router.delete('api/individualWorkoutsTabel', individualWorkouts.destroy);
 
 
-
-
+//export
+module.exports = router;
 
 
 

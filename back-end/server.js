@@ -8,17 +8,18 @@ const path = require('path');
 const bodyParser = ('body-parser');
 let Sequelize = require('sequelize');
 
+/******************************************
+/     Put your name in this let           *
+******************************************/
+let name = 'sassankermani';
+
 let sequelize = new Sequelize('postgres://' + name + '@localhost:5432/dnddatabase');
 
 const port = process.env.PORT || 3000;
 
 //app.use set up
-app.use(bodyParser.json());
+//app.use(bodyParser.json());
 
-/************************************************
-/     Put your name in this let       *
-************************************************/
-let name = 'sassankermani';
 
 //for heroku
 if(!process.env.DYNO) {
@@ -32,11 +33,11 @@ if(!process.env.DYNO) {
   }
 
 //for huroku / anguler
-app.use(express.static(__dirname + '/dist'));
+app.use(express.static(__dirname + "/" /* + '/dist') */ ));
 
-  app.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname + '/dist/index.html'));
-  });
+// app.get('/*', function(req, res) {
+//   res.sendFile(path.join(__dirname + '/dist/index.html'));
+// });
 
 
 //router
