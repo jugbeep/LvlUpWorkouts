@@ -7,15 +7,26 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { AuthService } from './auth.service';
 
 import { environment } from '../environments/environment';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { workoutService } from './workout.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './homepage/homepage.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+<<<<<<< HEAD
 import { LoginComponent } from './login/login.component';
 import { EmailComponent } from './email/email.component';
 import { SignupComponent } from './signup/signup.component';
 import { WorkoutStatisticsComponent } from './workout-statistics/workout-statistics.component';
+=======
+import { LoginComponent } from './auth/login/login.component';
+import { EmailComponent } from './auth/email/email.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { AuthComponent } from './auth/auth.component';
+import { MonsterComponent } from './monster/monster.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+>>>>>>> 938618492e121d0130e9b0fe3c3ef2c6bbff058e
 import { WorkoutsComponent } from './workouts/workouts.component';
 
 
@@ -34,7 +45,13 @@ export const firebaseConfig = {
     LoginComponent,
     EmailComponent,
     SignupComponent,
+<<<<<<< HEAD
     WorkoutStatisticsComponent,
+=======
+    AuthComponent,
+    MonsterComponent,
+    PageNotFoundComponent,
+>>>>>>> 938618492e121d0130e9b0fe3c3ef2c6bbff058e
     WorkoutsComponent
 
   ],
@@ -45,6 +62,7 @@ export const firebaseConfig = {
     FormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
+    InMemoryWebApiModule.forRoot(workoutService, {delay: 600}),
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
 
