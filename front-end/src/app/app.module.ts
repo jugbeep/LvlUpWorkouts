@@ -15,11 +15,7 @@ import { HomeComponent } from './homepage/homepage.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
-import { LoginComponent } from './login/login.component';
-import { EmailComponent } from './email/email.component';
-import { SignupComponent } from './signup/signup.component';
 import { WorkoutStatisticsComponent } from './workout-statistics/workout-statistics.component';
-
 import { LoginComponent } from './auth/login/login.component';
 import { EmailComponent } from './auth/email/email.component';
 import { SignupComponent } from './auth/signup/signup.component';
