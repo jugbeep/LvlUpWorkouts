@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Workout } from './workout';
 import { WorkoutsService } from '../workouts.service';
-import { Observable } from 'rxjs/observable/of';
-
 
 
 @Component({
@@ -11,13 +9,13 @@ import { Observable } from 'rxjs/observable/of';
   styleUrls: ['./workouts.component.scss']
 })
 
-
 export class WorkoutsComponent implements OnInit {
 
   selectedWorkout: Workout;
-  workouts: Workouts[];
 
-  constructor(private workoutService: WorkoutsService ) { }
+  workouts: Workout[];
+
+  constructor(private workoutsService: WorkoutsService ) { }
 
   ngOnInit() {
     this.getWorkouts();
@@ -28,7 +26,8 @@ export class WorkoutsComponent implements OnInit {
   }
 
   getWorkouts(): void {
-    this.workouts = this.WorkoutsService.getWorkouts();
+    this.workoutsService.getWorkouts()
+      .subscribe(workouts => this.workouts = workouts)
   }
 
 }
