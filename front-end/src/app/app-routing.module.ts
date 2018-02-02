@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { SplashComponent } from './splash/splash.component'; //added for first page seen
 import { HomeComponent } from './homepage/homepage.component';
 
 
@@ -14,10 +15,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: SplashComponent}, //changed to splash landing called home in route
   { path: 'login', component: LoginComponent },
   { path: 'email-login', component: EmailComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'home', component: HomeComponent },
+  { path: 'start', component: HomeComponent }, //changed from home to start for second route hit
   { path: 'monster', component: MonsterComponent},
   { path: 'workouts', component: WorkoutsComponent },
   { path: '*', component: PageNotFoundComponent }

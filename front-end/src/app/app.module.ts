@@ -7,7 +7,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { AuthService } from './auth.service';
 
 import { environment } from '../environments/environment';
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { workoutService } from './workout.service';
 
 import { AppComponent } from './app.component';
@@ -36,6 +36,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 =======
 >>>>>>> 9de8ff30a2785a2f36727b07760af518f03c69d7
 import { WorkoutsComponent } from './workouts/workouts.component';
+import { SplashComponent } from './splash/splash.component';
 
 
 export const firebaseConfig = {
@@ -66,8 +67,13 @@ export const firebaseConfig = {
     AuthComponent,
     MonsterComponent,
     PageNotFoundComponent,
+<<<<<<< HEAD
 >>>>>>> 9de8ff30a2785a2f36727b07760af518f03c69d7
     WorkoutsComponent
+=======
+    WorkoutsComponent,
+    SplashComponent
+>>>>>>> master
 
   ],
   imports: [
@@ -77,7 +83,7 @@ export const firebaseConfig = {
     FormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
-    InMemoryWebApiModule.forRoot(workoutService, {delay: 600}),
+    // InMemoryWebApiModule.forRoot(workoutService, {delay: 600}),
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
 
