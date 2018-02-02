@@ -30,8 +30,10 @@ function destroy(req, res) {
     console.log("after in sendAll funciton")
 };
 
-module.exports.sendAll = sendAll;
-module.exports.sendOne = sendOne;
-module.exports.create = create;
-module.exports.update = update;
-module.exports.destroy = destroy;
+module.exports = {
+    sendAll : sendAll,
+    sendOne : sendOne,
+    create : create,
+    update : update,
+    destroy : destroy
+}
