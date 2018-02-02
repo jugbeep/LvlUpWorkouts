@@ -16,9 +16,9 @@ let individualWorkouts = require('../controllers/individualWorkoutsTavel.js')
 // 	res.send('bettr test');
 // });
 
-/************************************
-*		routs for user tabel 		*
-************************************/
+/****************************
+*	routs for user tabel 	*
+****************************/
 //send all users
 router.get('/api/userTabel', userTabelController.sendAll);
 
@@ -35,9 +35,9 @@ router.put('api/userTabel', userTabelController.update);
 router.delete('api/userTabel', userTabelController.destroy);
 
 
-/************************************************
-*			routs for workout activitys			*
-************************************************/
+/************************************
+*	routs for workout activitys 	*
+************************************/
 //send all workout activitys
 router.get('/api/workoutActivitysTabel', workOutActivities.sendAll);
 
@@ -54,9 +54,9 @@ router.put('api/workoutActivitysTabel', workOutActivities.update);
 router.delete('api/workoutActivitysTabel', workOutActivities.destroy);
 
 
-/********************************************
-*		routs for individual workouts 		*
-********************************************/
+/************************************
+*	routs for individual workouts 	*
+************************************/
 //send all workout activitys
 router.get('/api/individualWorkoutsTabel', individualWorkouts.sendAll);
 

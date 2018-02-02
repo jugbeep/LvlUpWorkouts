@@ -2,11 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './homepage/homepage.component';
 
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
-import { EmailComponent } from './email/email.component';
-import { WorkoutStatisticsComponent} from './workout-statistics/workout-statistics.component';
 
+import { WorkoutStatisticsComponent} from './workout-statistics/workout-statistics.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { EmailComponent } from './auth/email/email.component';
@@ -16,7 +13,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'homepage', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'email-login', component: EmailComponent },
   { path: 'signup', component: SignupComponent },
@@ -31,3 +28,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

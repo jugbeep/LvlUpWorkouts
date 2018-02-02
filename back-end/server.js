@@ -6,19 +6,21 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const bodyParser = ('body-parser');
-let Sequelize = require('sequelize');
+//let Sequelize = require('sequelize');														//this is now in models/index.js 
 
-/******************************************
-/     Put your name in this let           *
-******************************************/
-let name = 'sassankermani';
+/********************************
+/	Put your name in this let 	*															//this is now in models/index.js 
 
-let sequelize = new Sequelize('postgres://' + name + '@localhost:5432/dnddatabase');
+********************************/
+//let name = 'sassankermani';																//this is now in models/index.js 
+
+
+//let sequelize = new Sequelize('postgres://' + name + '@localhost:5432/dnddatabase');		//this is now in models/index.js 
 
 const port = process.env.PORT || 3000;
 
 //app.use set up
-//app.use(bodyParser.json());
+//app.use(bodyParser.json());																//this was braking i got rid of it has not broke net. 
 
 
 //for heroku

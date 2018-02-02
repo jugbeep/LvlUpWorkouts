@@ -1,33 +1,53 @@
- // this is just so I can do soem tests
+//bringing stuff in form mdels
+db = require('../models');
+let WorkOutActivities = db.models.workOutActivities;
 
+//get all
 function sendAll(req, res) {
-    console.log("befor in sendAll funciton")
-    res.send("test");
-    console.log("after in sendAll funciton")
+    WorkOutActivities.findAll().then(function(workOutActivities){
+        res.json(workOutActivities)
+    })
 };
 
+//get one
 function sendOne(req, res) {
-    console.log("befor in sendAll funciton")
-    res.send("test");
-    console.log("after in sendAll funciton")
+    WorkOutActivities.findById(req.params.id)
+        .then(function(workOutActivities){
+            if(!workOutActivities) res.send("workOutActivities is not found ");
+            else res.json(workOutActivities);
+        });   
 };
 
+//make a new workOutActivities
 function create(req, res) {
-    console.log("befor in sendAll funciton")
-    res.send("test");
-    console.log("after in sendAll funciton")
+    WorkOutActivities.create(req.body).then(function(workOutActivities){
+        if(!workOutActivities) res.send("workOutActivities has not been saved");
+        else res.json(workOutActivities);
+    })
 };
 
+//updates workOutActivities
 function update(req, res) {
-    console.log("befor in sendAll funciton")
-    res.send("test");
-    console.log("after in sendAll funciton")
+    WorkOutActivities.findById(req.params.id)
+        .then(function(song){
+            if(!workOutActivities) res.send(" workOutActivities is not found ")
+            else return workOutActivities.updateAttrivutes(req.body);
+        });
+        .then(function(workOutActivities){
+            res.json(workOutActivities);
+        })
 };
 
+//delets workOutActivities
 function destroy(req, res) {
-    console.log("befor in sendAll funciton")
-    res.send("test");
-    console.log("after in sendAll funciton")
+    WorkOutActivities.findById(req.params.id)
+        .then(function(song){
+            if(!workOutActivities) res.send(" workOutActivities is not found ");
+            else return workOutActivities.destroy();
+        })
+        .then(function(){
+            res.send("workOutActivities deleted.")
+        })
 };
 
 module.exports.sendAll = sendAll;
