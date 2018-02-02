@@ -12,21 +12,21 @@ let sequelize = new Sequelize('postgres://' + name + '@localhost:5432/dnddatabas
 module.exports.Sequelize = Sequelize;
 
 //models
-let user = sequelize.import('./user');
-let workout = sequelize.import('./workout');
-let workoutactivity.import('./workoutactivity')
+let User = sequelize.import('./user');
+let Workout = sequelize.import('./workout');
+let Workoutactivity.import('./workoutactivity')
 
 //relationships
-workout.belongsTo(user);
-user.hasMany(workout);
+Workout.belongsTo(User);
+User.hasMany(Workout);
 
-workoutactivity.belongsTo(user);
-user.hasMany(workoutactivity);
+Workoutactivity.belongsTo(User);
+User.hasMany(Workoutactivity);
 
 
 //exports moduels
 module.exports = {
-	user : user
-	workout : workout
-	workoutactivity : workoutactivity
+	User : User
+	Workout : Workout
+	Workoutactivity : Workoutactivity
 }
