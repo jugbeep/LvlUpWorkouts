@@ -7,6 +7,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { AuthService } from './auth.service';
 
 import { environment } from '../environments/environment';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { workoutService } from './workout.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './homepage/homepage.component';
@@ -49,6 +51,7 @@ export const firebaseConfig = {
     FormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
+    InMemoryWebApiModule.forRoot(workoutService, {delay: 600}),
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Workout } from './workout';
 
 @Component({
   selector: 'app-workouts',
@@ -7,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkoutsComponent implements OnInit {
 
+  workout: Workout = {
+  	id: 1,
+  	name: 'Squat'
+  };
+  
   constructor() { }
 
   ngOnInit() {

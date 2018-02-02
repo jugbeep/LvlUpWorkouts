@@ -1,3 +1,9 @@
-<p>
-  workouts works!
-</p>
+<h1>{{workout.name | uppercase }} Details </h1>
+<div><span>id: </span>{{workout.id}}</div>
+
+<div>
+	<label>name: 
+		<input [(ngModel)]="workout.name" placeholder="name">
+	</label>
+</div>
+
