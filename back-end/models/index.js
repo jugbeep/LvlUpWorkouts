@@ -6,27 +6,30 @@ var Sequelize = require('sequelize');
 ********************************/
 let name = 'sassankermani';
 
-let sequelize = new Sequelize('postgres://' + name + '@localhost:5432/dnddatabase');
+var sequelize = new Sequelize('postgres://' + name + '@localhost:5432/dnddatabase');
 
 //Export models and Sequelize for seed and dbSetup
-module.exports.Sequelize = Sequelize;
+module.exports.sequelize = sequelize;
 
 //models
 let User = sequelize.import('./user');
 let Workout = sequelize.import('./workout');
-let Workoutactivity.import('./workoutactivity')
+let Workoutactivity = sequelize.import('./workoutactivity')
 
 //relationships
 Workout.belongsTo(User);
 User.hasMany(Workout);
 
-Workoutactivity.belongsTo(User);
-User.hasMany(Workoutactivity);
+//Workoutactivity.belongsTo(User);
+//User.hasMany(Workoutactivity);
+
+Workout.belongsTo(Workoutactivity);
+Workoutactivity.hasMany(Workout);
 
 
 //exports moduels
-module.exports = {
-	User : User
-	Workout : Workout
+module.exports.models = {
+	User : User,
+	Workout : Workout,
 	Workoutactivity : Workoutactivity
 }

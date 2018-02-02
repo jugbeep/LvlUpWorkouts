@@ -27,21 +27,24 @@ function create(req, res) {
 };
 
 //updates workOutActivities
-function update(req, res) {
+function update(req, res){
+    console.log("first");
     WorkOutActivities.findById(req.params.id)
-        .then(function(song){
-            if(!workOutActivities) res.send(" workOutActivities is not found ")
-            else return workOutActivities.updateAttrivutes(req.body);
-        });
+        .then(function(workOutActivities){
+            console.log("third");
+            if(!workOutActivities) res.send("workOutActivities has not found");
+            else return workOutActivities.updateAttributes(req.body);
+            console.log("line 35");
+        })
         .then(function(workOutActivities){
             res.json(workOutActivities);
-        })
-};
+        });
+}
 
 //delets workOutActivities
 function destroy(req, res) {
     WorkOutActivities.findById(req.params.id)
-        .then(function(song){
+        .then(function(workOutActivities){
             if(!workOutActivities) res.send(" workOutActivities is not found ");
             else return workOutActivities.destroy();
         })
