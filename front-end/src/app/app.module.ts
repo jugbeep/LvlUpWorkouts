@@ -26,6 +26,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 import { WorkoutsComponent } from './workouts/workouts.component';
 import { SplashComponent } from './splash/splash.component';
+import { AboutComponent } from './about/about.component';
 
 
 export const firebaseConfig = {
@@ -51,7 +52,8 @@ export const firebaseConfig = {
     MonsterComponent,
     PageNotFoundComponent,
     WorkoutsComponent,
-    SplashComponent
+    SplashComponent,
+    AboutComponent
 
   ],
   imports: [
