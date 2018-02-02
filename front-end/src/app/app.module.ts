@@ -14,27 +14,16 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './homepage/homepage.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { LoginComponent } from './login/login.component';
-import { EmailComponent } from './email/email.component';
-import { SignupComponent } from './signup/signup.component';
-import { WorkoutStatisticsComponent } from './workout-statistics/workout-statistics.component';
-=======
-=======
+
 
 import { WorkoutStatisticsComponent } from './workout-statistics/workout-statistics.component';
->>>>>>> 9de8ff30a2785a2f36727b07760af518f03c69d7
 import { LoginComponent } from './auth/login/login.component';
 import { EmailComponent } from './auth/email/email.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { AuthComponent } from './auth/auth.component';
 import { MonsterComponent } from './monster/monster.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-<<<<<<< HEAD
->>>>>>> 938618492e121d0130e9b0fe3c3ef2c6bbff058e
-=======
->>>>>>> 9de8ff30a2785a2f36727b07760af518f03c69d7
+
 import { WorkoutsComponent } from './workouts/workouts.component';
 import { SplashComponent } from './splash/splash.component';
 
@@ -54,26 +43,15 @@ export const firebaseConfig = {
     LoginComponent,
     EmailComponent,
     SignupComponent,
-<<<<<<< HEAD
-<<<<<<< HEAD
-    WorkoutStatisticsComponent,
-=======
     AuthComponent,
     MonsterComponent,
     PageNotFoundComponent,
->>>>>>> 938618492e121d0130e9b0fe3c3ef2c6bbff058e
-=======
     WorkoutStatisticsComponent,
     AuthComponent,
     MonsterComponent,
     PageNotFoundComponent,
-<<<<<<< HEAD
->>>>>>> 9de8ff30a2785a2f36727b07760af518f03c69d7
-    WorkoutsComponent
-=======
     WorkoutsComponent,
     SplashComponent
->>>>>>> master
 
   ],
   imports: [
