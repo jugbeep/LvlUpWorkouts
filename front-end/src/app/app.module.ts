@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { EmailComponent } from './email/email.component';
 import { SignupComponent } from './signup/signup.component';
 import { WorkoutStatisticsComponent } from './workout-statistics/workout-statistics.component';
+import { WorkoutsComponent } from './workouts/workouts.component';
 
 
 export const firebaseConfig = {
@@ -33,7 +34,8 @@ export const firebaseConfig = {
     LoginComponent,
     EmailComponent,
     SignupComponent,
-    WorkoutStatisticsComponent
+    WorkoutStatisticsComponent,
+    WorkoutsComponent
 
   ],
   imports: [
