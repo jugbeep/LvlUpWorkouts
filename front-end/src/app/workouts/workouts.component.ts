@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Workout } from './workout';
 
+import { Workout } from './workout';
 
 @Component({
   selector: 'app-workouts',
@@ -8,7 +8,6 @@ import { Workout } from './workout';
   styleUrls: ['./workouts.component.scss']
 })
 export class WorkoutsComponent implements OnInit {
-
 
   workout: Workout = {
   	id: 1,

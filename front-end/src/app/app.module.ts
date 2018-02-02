@@ -15,6 +15,7 @@ import { HomeComponent } from './homepage/homepage.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
+
 import { WorkoutStatisticsComponent } from './workout-statistics/workout-statistics.component';
 import { LoginComponent } from './auth/login/login.component';
 import { EmailComponent } from './auth/email/email.component';
@@ -22,8 +23,10 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { AuthComponent } from './auth/auth.component';
 import { MonsterComponent } from './monster/monster.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 import { WorkoutsComponent } from './workouts/workouts.component';
 import { SplashComponent } from './splash/splash.component';
+import { AboutComponent } from './about/about.component';
 
 
 export const firebaseConfig = {
@@ -41,12 +44,16 @@ export const firebaseConfig = {
     LoginComponent,
     EmailComponent,
     SignupComponent,
+    AuthComponent,
+    MonsterComponent,
+    PageNotFoundComponent,
     WorkoutStatisticsComponent,
     AuthComponent,
     MonsterComponent,
     PageNotFoundComponent,
     WorkoutsComponent,
-    SplashComponent
+    SplashComponent,
+    AboutComponent
 
   ],
   imports: [
