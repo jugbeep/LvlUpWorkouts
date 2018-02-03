@@ -29,6 +29,7 @@ import { WorkoutsComponent } from './workouts/workouts.component';
 import { WorkoutDetailComponent } from './workout-detail/workout-detail.component';
 import { SplashComponent } from './splash/splash.component';
 import { AboutComponent } from './about/about.component';
+import { WorkoutListComponent } from './workout-list/workout-list.component';
 
 
 
@@ -58,7 +59,8 @@ export const firebaseConfig = {
     WorkoutsComponent,
     WorkoutDetailComponent,
     SplashComponent,
-    AboutComponent
+    AboutComponent,
+    WorkoutListComponent
 
   ],
   imports: [
