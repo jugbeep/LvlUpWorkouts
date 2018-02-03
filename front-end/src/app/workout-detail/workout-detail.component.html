@@ -1,10 +1,10 @@
-<div *ngIf="workout">
-
-	<h2>{{workout.name}} Details</h2>
-	<div><span>id: </span>{{workout.id}}</div>
-	<div>
-		<label>Name:
-		  <input [(ngModel)]="workout.name" placeholder="workout"></label>
-	</div>
-	
-</div>	
+<h2>Workout Detail</h2>
+<form [formGroup]="workoutForm" novalidate>
+  <div class="form-group">
+    <label class="center-block">Name:
+      <input class="form-control" formControlName="name">
+    </label>
+  </div>
+</form>
+<p>Form value: {{workoutForm.get('name').value }}</p>
+<p>Form status: {{workoutForm.status | json }}</p>
