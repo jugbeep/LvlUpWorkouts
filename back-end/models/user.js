@@ -1,14 +1,9 @@
 module.exports = function(sequelize, Sequelize){
-
-  	var model = sequelize.define(
-
-  		"user", {
-
-    		nsme: Sequelize.STRING
-    		
+  	var models = sequelize.define(
+  		"user", 
+  		{
+    		name : Sequelize.STRING
   		}
   	);
-  	
-  	return model;
-  	
+  	return models;
 };

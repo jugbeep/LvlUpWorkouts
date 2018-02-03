@@ -3,6 +3,8 @@ import { Workout } from './workout';
 import { WorkoutsService } from '../workouts.service';
 
 
+import { Workout } from './workout';
+
 @Component({
   selector: 'app-workouts',
   templateUrl: './workouts.component.html',

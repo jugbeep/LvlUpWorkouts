@@ -1,39 +1,57 @@
- // this is just so I can do soem tests
+//bringing stuff in form mdels
+db = require('../models');
+let IndividualWorkouts = db.models.individualWorkouts;
 
+//get all
 function sendAll(req, res) {
-    console.log("befor in sendAll funciton")
-    res.send("test");
-    console.log("after in sendAll funciton")
+    IndividualWorkouts.findAll().then(function(individualWorkouts){
+        res.json(individualWorkouts)
+    })
 };
 
+//get one
 function sendOne(req, res) {
-    console.log("befor in sendAll funciton")
-    res.send("test");
-    console.log("after in sendAll funciton")
+    IndividualWorkouts.findById(req.params.id)
+        .then(function(individualWorkouts){
+            if(!individualWorkouts) res.send("individualWorkouts is not found ");
+            else res.json(individualWorkouts);
+        });   
 };
 
+//make a new individualWorkouts
 function create(req, res) {
-    console.log("befor in sendAll funciton")
-    res.send("test");
-    console.log("after in sendAll funciton")
+    IndividualWorkouts.create(req.body).then(function(individualWorkouts){
+        if(!individualWorkouts) res.send("individualWorkouts has not been saved");
+        else res.json(individualWorkouts);
+    })
 };
 
+//updates individualWorkouts
 function update(req, res) {
-    console.log("befor in sendAll funciton")
-    res.send("test");
-    console.log("after in sendAll funciton")
+    IndividualWorkouts.findById(req.params.id)
+        .then(function(song){
+            if(!individualWorkouts) res.send(" individualWorkouts is not found ")
+            else return individualWorkouts.updateAttrivutes(req.body);
+        })
+        .then(function(individualWorkouts){
+            res.json(individualWorkouts);
+        })
 };
 
+//delets individualWorkouts
 function destroy(req, res) {
-    console.log("befor in sendAll funciton")
-    res.send("test");
-    console.log("after in sendAll funciton")
+    IndividualWorkouts.findById(req.params.id)
+        .then(function(song){
+            if(!individualWorkouts) res.send(" individualWorkouts is not found ");
+            else return individualWorkouts.destroy();
+        })
+        .then(function(){
+            res.send("individualWorkouts deleted.")
+        })
 };
 
-module.exports = {
-    sendAll : sendAll,
-    sendOne : sendOne,
-    create : create,
-    update : update,
-    destroy : destroy
-}
+module.exports.sendAll = sendAll;
+module.exports.sendOne = sendOne;
+module.exports.create = create;
+module.exports.update = update;
+module.exports.destroy = destroy;

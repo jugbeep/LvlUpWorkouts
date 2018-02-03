@@ -1,6 +1,6 @@
 //bringing stuff in form mdels
 db = require('../models');
-var User = db.models.user;
+let User = db.models.user;
 
 //get all
 function sendAll(req, res) {
@@ -32,10 +32,10 @@ function update(req, res) {
         .then(function(song){
             if(!user) res.send(" user is not found ")
             else return user.updateAttrivutes(req.body);
-        });
+        })
         .then(function(user){
             res.json(user);
-        })
+        });
 };
 
 //delets user
