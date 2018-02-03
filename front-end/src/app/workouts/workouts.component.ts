@@ -10,9 +10,7 @@ import { WorkoutsService } from '../workouts.service';
 })
 
 export class WorkoutsComponent implements OnInit {
-
   selectedWorkout: Workout;
-
   workouts: Workout[];
 
   constructor(private workoutsService: WorkoutsService ) { }

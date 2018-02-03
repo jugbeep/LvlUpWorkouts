@@ -34,6 +34,7 @@ export const firebaseConfig = {
   storageBucket: "",
   messagingSenderId: "640818277665"
 }
+
 @NgModule({
   declarations: [
     AppComponent,
