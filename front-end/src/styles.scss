@@ -55,3 +55,24 @@ $red:#F44336;
 	}
 }
 
+.header {
+  position: relative;
+  right: 0;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #0000ff;
+  text-align: center;
+
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #0000ff;
+  text-align: center;
+}
+
