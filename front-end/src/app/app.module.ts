@@ -7,13 +7,15 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { AuthService } from './auth.service';
 
 import { environment } from '../environments/environment';
+
 // import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { workoutService } from './workout.service';
+import { WorkoutsService } from './workouts.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './homepage/homepage.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+
 
 import { WorkoutStatisticsComponent } from './workout-statistics/workout-statistics.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -23,7 +25,10 @@ import { AuthComponent } from './auth/auth.component';
 import { MonsterComponent } from './monster/monster.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WorkoutsComponent } from './workouts/workouts.component';
+import { WorkoutDetailComponent } from './workout-detail/workout-detail.component';
 import { SplashComponent } from './splash/splash.component';
+import { AboutComponent } from './about/about.component';
+
 
 
 export const firebaseConfig = {
@@ -34,6 +39,7 @@ export const firebaseConfig = {
   storageBucket: "",
   messagingSenderId: "640818277665"
 }
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,12 +47,17 @@ export const firebaseConfig = {
     LoginComponent,
     EmailComponent,
     SignupComponent,
+    AuthComponent,
+    MonsterComponent,
+    PageNotFoundComponent,
     WorkoutStatisticsComponent,
     AuthComponent,
     MonsterComponent,
     PageNotFoundComponent,
     WorkoutsComponent,
-    SplashComponent
+    WorkoutDetailComponent,
+    SplashComponent,
+    AboutComponent
 
   ],
   imports: [
@@ -60,7 +71,7 @@ export const firebaseConfig = {
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
 
-  providers: [ AuthService ],
+  providers: [ AuthService, WorkoutsService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "@angular/service-worker": "^5.2.0",
+    "angular-background-img": "^1.1.2",
     "angular-background-img": "^1.1.2",    
     "bootstrap": "4.0.0-beta.2",
     "core-js": "^2.4.1",
@@ -51,5 +52,5 @@
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
     "typescript": "~2.5.3"
-  }
+    }
 }

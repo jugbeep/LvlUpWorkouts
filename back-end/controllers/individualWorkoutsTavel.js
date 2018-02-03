@@ -32,7 +32,7 @@ function update(req, res) {
         .then(function(song){
             if(!individualWorkouts) res.send(" individualWorkouts is not found ")
             else return individualWorkouts.updateAttrivutes(req.body);
-        });
+        })
         .then(function(individualWorkouts){
             res.json(individualWorkouts);
         })
