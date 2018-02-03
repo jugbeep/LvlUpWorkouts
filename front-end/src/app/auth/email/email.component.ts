@@ -16,12 +16,84 @@ export class EmailComponent implements OnInit {
   ngOnInit() {}
 
   onSubmit(formData) {
-  	if (formData.valid) {
+  	if (formData.valid && passwordSecure(formData.value.password) ) {
   		console.log(formData.value);
-  		this.authService.login(
+
+      this.authService.login(
   			formData.value.email,
   			formData.value.password
   			);
-  		}
+  		}else{
+        console.log("NOPE YOUR PASSWORD IS NO GOOD HEAR ---- emailcomonent.ts line 27 ");
+      }
   	}
+}
+
+
+//passworkd is valad
+function passwordSecure( password : string ){
+  //these need to be true for this to pass
+  let minchars      : boolean = false;    //8 for now is min
+  let hasNum        : boolean = false;
+  let hasSym        : boolean = false;
+  let hasLowCase    : boolean = false;
+  let hasUpCase     : boolean = false;
+
+  //for loop to see each letter of password
+  for( let i : number = 0; i < password.length; i++){
+      //getting charcode || DEC
+      let temp : number = password.charCodeAt(i);
+
+      //lower
+      if( (temp >= 97) && (temp <= 122) ){
+        hasLowCase = true;
+        console.log("hasLowCase");
+      }
+
+      //uper
+      if( (temp >= 65) && (temp <= 90) ){
+        hasUpCase = true;
+        console.log("hasUpCase");
+      }
+
+      //number
+      if( (temp >= 48) && (temp <= 57) ){
+        hasNum = true;
+        console.log("hasNum");
+      }
+
+      //symble
+      if( ( (temp >= 33) && (temp <= 47) ) ||  (temp >= 58) && (temp <= 64) ||  (temp >= 123) && (temp <= 126) || (temp >= 91) && (temp <= 96) ){
+        hasSym = true;
+        console.log("hasSym");
+      }
+
+      if( i >= 8 ){
+        minchars = true;
+        console.log("minchars");
+      }
+
+      //suming it all up
+      if( minchars && hasNum && hasSym && hasLowCase && hasUpCase ){
+        console.log("");
+        console.log("---");
+        console.log(" password is valid ");
+        console.log("---");
+        console.log("");
+        return true;
+      }else{
+        console.log("");
+        console.log("---");
+        console.log(" password NOT is valid ");
+        console.log("---");
+        console.log("");
+
+        console.log("minchars: " + minchars);
+        console.log("hasNum: " + hasNum);
+        console.log("hasSym: " + hasSym);
+        console.log("hasLowCase: " + hasLowCase);
+        console.log("hasUpCase: " + hasUpCase);
+        return false;
+      }
+  }
 }
