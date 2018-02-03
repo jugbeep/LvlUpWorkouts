@@ -50,7 +50,6 @@ export const firebaseConfig = {
     WorkoutStatisticsComponent,
     AuthComponent,
     MonsterComponent,
-    PageNotFoundComponent,
     WorkoutsComponent,
     SplashComponent,
     AboutComponent
