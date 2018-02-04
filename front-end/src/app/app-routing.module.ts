@@ -25,7 +25,8 @@ const routes: Routes = [
   { path: 'monster', component: MonsterComponent},
   { path: 'workouts', component: WorkoutsComponent },
   { path: '*', component: PageNotFoundComponent },
-  { path: 'about', component: AboutComponent}
+  { path: 'about', component: AboutComponent},
+  { path: 'stats', component: WorkoutStatisticsComponent}
 ];
 
 @NgModule({
