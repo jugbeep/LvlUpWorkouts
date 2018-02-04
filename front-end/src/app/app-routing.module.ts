@@ -12,6 +12,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { EmailComponent } from './auth/email/email.component';
 import { MonsterComponent } from './monster/monster.component';
 import { WorkoutsComponent } from './workouts/workouts.component';
+import { AboutComponent } from './about/about.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
