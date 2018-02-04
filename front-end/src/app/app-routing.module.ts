@@ -1,9 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SplashComponent } from './splash/splash.component'; //added for first page seen
-import { HomeComponent } from './homepage/homepage.component';
-import { AboutComponent} from './about/about.component';
-
 
 
 import { WorkoutStatisticsComponent} from './workout-statistics/workout-statistics.component';
@@ -13,6 +9,8 @@ import { EmailComponent } from './auth/email/email.component';
 import { MonsterComponent } from './monster/monster.component';
 import { WorkoutsComponent } from './workouts/workouts.component';
 import { AboutComponent } from './about/about.component';
+import { SplashComponent } from './splash/splash.component'; //added for first page seen
+import { HomeComponent } from './homepage/homepage.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
