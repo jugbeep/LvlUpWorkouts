@@ -7,8 +7,9 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { AuthService } from './auth.service';
 
 import { environment } from '../environments/environment';
+
 // import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { workoutService } from './workout.service';
+import { WorkoutsService } from './workouts.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './homepage/homepage.component';
@@ -23,10 +24,11 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { AuthComponent } from './auth/auth.component';
 import { MonsterComponent } from './monster/monster.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
 import { WorkoutsComponent } from './workouts/workouts.component';
+import { WorkoutDetailComponent } from './workout-detail/workout-detail.component';
 import { SplashComponent } from './splash/splash.component';
 import { AboutComponent } from './about/about.component';
+
 
 
 export const firebaseConfig = {
@@ -37,6 +39,7 @@ export const firebaseConfig = {
   storageBucket: "",
   messagingSenderId: "640818277665"
 }
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +54,7 @@ export const firebaseConfig = {
     AuthComponent,
     MonsterComponent,
     WorkoutsComponent,
+    WorkoutDetailComponent,
     SplashComponent,
     AboutComponent
 
@@ -66,7 +70,7 @@ export const firebaseConfig = {
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
 
-  providers: [ AuthService ],
+  providers: [ AuthService, WorkoutsService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
