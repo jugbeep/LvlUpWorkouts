@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http'; 
+import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -28,6 +29,7 @@ import { WorkoutsComponent } from './workouts/workouts.component';
 import { WorkoutDetailComponent } from './workout-detail/workout-detail.component';
 import { SplashComponent } from './splash/splash.component';
 import { AboutComponent } from './about/about.component';
+import { WorkoutListComponent } from './workout-list/workout-list.component';
 
 
 
@@ -56,7 +58,8 @@ export const firebaseConfig = {
     WorkoutsComponent,
     WorkoutDetailComponent,
     SplashComponent,
-    AboutComponent
+    AboutComponent,
+    WorkoutListComponent
 
   ],
   imports: [
@@ -64,6 +67,7 @@ export const firebaseConfig = {
     AppRoutingModule,
     HttpModule,
     FormsModule,
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
     // InMemoryWebApiModule.forRoot(workoutService, {delay: 600}),

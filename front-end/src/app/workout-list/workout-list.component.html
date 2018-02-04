@@ -1,0 +1,7 @@
+<nav>
+  <a *ngFor="let workout of workouts | async" (click)="select(hero)">{{workout.name}}</a>
+</nav>
+
+<div *ngIf="selectedWorkout">
+  <app-workout-detail [workout]="selectedWorkout"></app-workout-detail>
+</div>
