@@ -10,6 +10,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { EmailComponent } from './auth/email/email.component';
 import { MonsterComponent } from './monster/monster.component';
 import { WorkoutsComponent } from './workouts/workouts.component';
+import { AboutComponent } from './about/about.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'start', component: HomeComponent }, //changed from home to start for second route hit
   { path: 'monster', component: MonsterComponent},
   { path: 'workouts', component: WorkoutsComponent },
+  { path: 'about', component: AboutComponent },
   { path: '*', component: PageNotFoundComponent }
 ];
 
