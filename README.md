@@ -20,7 +20,7 @@ Contributors:
 Patrick Botkins https://github.com/jugbeep
 Kevin James https://github.com/trumpetcoder
 Laura Johnson https://github.com/nemazeelaura
-Sassan https://github.com/sassankermani
+Sassan Kermani https://github.com/sassankermani
 
 ************************RPG-UpFit******************************************
 

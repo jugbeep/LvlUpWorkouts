@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SplashComponent } from './splash/splash.component'; //added for first page seen
 import { HomeComponent } from './homepage/homepage.component';
+import { AboutComponent} from './about/about.component';
+
 
 
 import { WorkoutStatisticsComponent} from './workout-statistics/workout-statistics.component';
@@ -23,8 +25,9 @@ const routes: Routes = [
   { path: 'start', component: HomeComponent }, //changed from home to start for second route hit
   { path: 'monster', component: MonsterComponent},
   { path: 'workouts', component: WorkoutsComponent },
-  { path: 'about', component: AboutComponent },
-  { path: '*', component: PageNotFoundComponent }
+  { path: '*', component: PageNotFoundComponent },
+  { path: 'about', component: AboutComponent},
+  { path: 'stats', component: WorkoutStatisticsComponent}
 ];
 
 @NgModule({
