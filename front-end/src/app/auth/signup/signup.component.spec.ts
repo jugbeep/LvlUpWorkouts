@@ -19,7 +19,11 @@ describe('SignupComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should be created', () => {
     expect(component).toBeTruthy();
   });
+  //  it('should have an email', () => {
+  //   expect(component.emailName).toBeTruthy();
+  // });
 });
+
