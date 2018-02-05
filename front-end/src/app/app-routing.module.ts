@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'start', component: HomeComponent }, //changed from home to start for second route hit
   { path: 'monster', component: MonsterComponent},
-  { path: 'workouts', component: WorkoutListComponent },
+  { path: 'workouts', component: WorkoutsComponent },
   { path: 'detail/:id', component: WorkoutDetailComponent }, 
   { path: 'about', component: AboutComponent},
   { path: 'stats', component: WorkoutStatisticsComponent},

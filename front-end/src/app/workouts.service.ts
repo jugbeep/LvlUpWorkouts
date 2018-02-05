@@ -24,7 +24,7 @@ export class WorkoutsService {
   getWorkouts(): Observable<Workout[]> {
     return this.http.get<Workout[]>(this.workoutsUrl)
       .pipe(
-        tap(workouts => this.log(`got workouts`)),
+        tap(workouts => this.log(`got some workouts`)),
         catchError(this.handleError('getWorkouts', []))
         );
   }
@@ -32,7 +32,8 @@ export class WorkoutsService {
   getWorkout(id: number): Observable<Workout> {
     const url = `${this.workoutsUrl}/${id}`;
     return this.http.get<Workout>(url).pipe(
-      tap(_ => this.log(`found workout id=${id}`))
+      tap(_ => this.log(`found workout id=${id}`)),
+      catchError(this.handleError<Workout>(`getWorkout id=${id}`))
       );
   }
 
@@ -43,47 +44,40 @@ export class WorkoutsService {
     return this.post(workout)
   }
 
-  delete(workout: Workout): Promise<Response> {
-    const headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-
-    const url = `${this.workoutsUrl}/${workout.id}`;
-
-    return this.http
-      .delete(url, { headers: headers })
-      .toPromise()
-      .catch(this.handleError);
+  updateWorkout(workout: Workout): Observable<any> {
+    return this.http.put(this.workoutsUrl, workout, httpOptions).pipe(
+      tap(_ => this.log(`updated workout id=${workout.id}`)),
+      catchError(this.handleError<any>('updateWorkout'))
+      );
   }
 
-  private post(workout: Workout): Promise<Workout> {
-    const headers = new Headers({ 
-      'Content-Type': 'application/json'
-    });
-
-    return this.http
-      .post(this.workoutsUrl, JSON.stringify(workout), { headers: headers })
-      .toPromise()
-      .then(res => res.json().data)
-      .catch(this.handleError);
+  addWorkout(workout: Workout): Observable<Workout> {
+    return this.http.post<Workout>(this.workoutsUrl, workout, httpOptions).pipe(
+      tap((workout: Workout) => this.log(`added workout w/ id=${workout.id}`)),
+      catchError(this.handleError<Workout>('addWorkout'))
+      );
   }
 
-  private put(workout: Workout): Promise<Workout> {
-    const headers = new Headers();
-    headers.append('Content-Type', 'Application/json');
+  deleteWorkout(workout: Workout | number): Observable<Workout> {
+    const id = typeof workout === 'number' ? workout : workout.id;
+    const url = `${this.workoutsUrl}/${id}`;
 
-    const url = `${this.workoutsUrl}/${workout.id}`;
-
-    return this.http
-      .put(url, JSON.stringify(workout), { headers: headers })
-      .toPromise()
-      .then(() => workout)
-      .catch(this.handleError);
+    return this.http.delete<Workout>(url, httpOptions).pipe(
+      tap(_ => this.log(`delete workout id=${id}`)),
+      catchError(this.handleError<Workout>('deleteWorkout'))
+      );
   }
 
-  private handleError(error: any): Promise<any> {
-    console.error('error: ', error);
-    return Promise.reject(error.message || error);
-  }
+  private handleError<T> (operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error);
+
+      this.log(`${operation} failed: ${error.message}`);
+
+      return of(result as T);
+    }
+  } 
+  
 
   private log(message: string) {
     console.log(message);
