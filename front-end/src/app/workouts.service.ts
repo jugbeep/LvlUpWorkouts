@@ -37,12 +37,12 @@ export class WorkoutsService {
       );
   }
 
-  save(workout: Workout): Promise<Workout> {
-    if (workout.id) {
-      return this.put(workout);
-    }
-    return this.post(workout)
-  }
+  // save(workout: Workout): Promise<Workout> {
+  //   if (workout.id) {
+  //     return this.put(workout);
+  //   }
+  //   return this.post(workout)
+  // }
 
   updateWorkout(workout: Workout): Observable<any> {
     return this.http.put(this.workoutsUrl, workout, httpOptions).pipe(
