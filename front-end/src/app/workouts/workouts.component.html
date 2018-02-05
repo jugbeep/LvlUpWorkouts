@@ -1,21 +1,33 @@
-<h2>My Workouts</h2>
- 
-<div>
-  <label>Workout name:
-    <input #workoutName />
-  </label>
-  <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(workoutName.value); workoutName.value=''">
-    add
-  </button>
+
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-12">
+      <h2>Workouts for {{''}}</h2>       
+      <div>
+        <label>Activity name:
+          <input #activityName />
+        </label>
+        <!-- (click) passes input value to add() and then clears the input -->
+        <button (click)="add(activityName.value); activityName.value=''">Add</button>
+      </div>
+       
+      <ul class="workouts">
+        <li *ngFor="let workout of workouts" >
+          <div *ngIf="workoutToEdit !== workout">
+            {{workout.id}} - {{workout.name}}
+            <button (click)="delete(workout)" class="delete">Delete</button>
+            <button (click)="updateWorkout(workout)" class="update" routerLink="/detail/{{workout.id}}">Edit</button>    
+          </div>
+        </li>
+      </ul>
+      
+      <div>
+        <button (click)="logout()" routerLink="/home" routerLinkActive="active" class="logout btn-lg move">Logout Account</button> 
+      </div>
+    
+    </div>
+  </div>
 </div>
- 
-<ul class="workouts">
-  <li *ngFor="let workout of workouts">
-    <a routerLink="/detail/{{workout.id}}">
-      <span class="badge">{{workout.id}}</span> {{workout.name}}
-    </a>
-    <button class="delete" title="delete workout"
-    (click)="delete(workout)">x</button>
-  </li>
-</ul>
+
+
+
