@@ -1,47 +1,33 @@
-<h2>My Workouts</h2>
- 
-<div>
-  <label>Workout name:
-    <input #workoutName />
-  </label>
-  <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(workoutName.value); workoutName.value=''">
-    add
-  </button>
-</div>
- 
-<ul class="workouts">
-  <li *ngFor="let workout of workouts" >
-    <div *ngIf="workoutToEdit !== workout">
-      {{workout.id}} - {{workout.name}}
-      <button (click)="delete(workout)">
-        Delete
-      </button>
-      <button (click)="updateWorkout(workout)" routerLink="/detail/{{workout.id}}">
-        Edit
-      </button>
-     <!--  <span class="badge">{{workout.id}}</span> {{workout.name}}
-      <button class="delete" title="delete workout"
-    (click)="delete(workout)">Delete</button> -->
 
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-12">
+      <h2>Workouts for {{''}}</h2>       
+      <div>
+        <label>Activity name:
+          <input #activityName />
+        </label>
+        <!-- (click) passes input value to add() and then clears the input -->
+        <button (click)="add(activityName.value); activityName.value=''">Add</button>
+      </div>
+       
+      <ul class="workouts">
+        <li *ngFor="let workout of workouts" >
+          <div *ngIf="workoutToEdit !== workout">
+            {{workout.id}} - {{workout.name}}
+            <button (click)="delete(workout)" class="delete">Delete</button>
+            <button (click)="updateWorkout(workout)" class="update" routerLink="/detail/{{workout.id}}">Edit</button>    
+          </div>
+        </li>
+      </ul>
+      
+      <div>
+        <button (click)="logout()" routerLink="/home" routerLinkActive="active" class="logout btn-lg move">Logout Account</button> 
+      </div>
     
     </div>
+  </div>
+</div>
 
-
-  </li>
-</ul>
- <button routerLink="/logout" routerLinkActive="active" class="logout-account-txt btn-lg move">Logout Account</button> 
-
-<!-- <li *ngFor="let comment of comments">
-    <div *ngIf="commentToEdit !== comment">
-      {{comment.comment}} - {{comment.author}}
-
-      <button (click)="deleteComment(comment)">
-        Delete
-      </button>
-      <button (click)="makeCommentEditable(comment)">
-        Edit
-      </button>
-    </div> -->
 
 
