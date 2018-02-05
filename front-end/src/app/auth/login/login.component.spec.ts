@@ -22,4 +22,9 @@ describe('LoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  //  it('should have value', () => {
+  //   expect($('.email btn-lg move')).toExist();
+  // });
+
+
 });

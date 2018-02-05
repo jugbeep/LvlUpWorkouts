@@ -1,0 +1,31 @@
+<h3>Workouts</h3>
+<div class="grid grid-pad">
+  <div *ngFor="let workout of workouts" (click)="gotoDetail(workout)" class="col-1-4">
+    <div>
+      <h4>{{workout.name}}</h4>
+    </div>
+  </div>
+</div>
+
+<!-- <h3 *ngIf='!isLoading'>Select a workout:
+<button (click)="getWorkouts()"class btn btn-primary>Refresh</button></h3>
+
+<nav>
+  	<ul *ngFor="let workout of workouts | async" (click)="select(workout)">
+  		<button>{{workout.name}}</button>
+  	</ul>
+  	Add a new workout:
+  	<form ng-submit="addWorkout()">
+  		<input type="text" name="name">
+  		<input type="submit">
+  	</form>	
+</nav>
+
+<div *ngIf="selectedWorkout">
+  <h3>{{selectedWorkout.name}}</h3>
+
+  <app-workout-detail [workout]="selectedWorkout"></app-workout-detail>
+</div> -->
+
+
+
