@@ -1,16 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http'; 
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { AuthService } from './auth.service';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { environment } from '../environments/environment';
 
-// import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { WorkoutDataService } from './data-model.service'
 import { WorkoutsService } from './workouts.service';
+import { AuthService } from './auth.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './homepage/homepage.component';
@@ -59,18 +61,20 @@ export const firebaseConfig = {
     WorkoutDetailComponent,
     SplashComponent,
     AboutComponent,
-    WorkoutListComponent
+    WorkoutListComponent,
+
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
-    // InMemoryWebApiModule.forRoot(workoutService, {delay: 600}),
+    InMemoryWebApiModule.forRoot(WorkoutDataService, { dataEncapsulation: false }),
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
 

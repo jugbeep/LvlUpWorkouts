@@ -1,7 +1,7 @@
-import { Component, OnChanges, Input } from '@angular/core';
-//import { Workout } from '../workouts/workout'
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Workout } from '../data-model';
+import { Component, OnChanges, Input, EventEmitter, Output, OnInit} from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+
+import { Workout } from '../workouts/workout';
 import { WorkoutsService } from '../workouts.service';
 
 @Component({
@@ -9,49 +9,44 @@ import { WorkoutsService } from '../workouts.service';
   templateUrl: './workout-detail.component.html',
   styleUrls: ['./workout-detail.component.scss']
 })
-export class WorkoutDetailComponent implements OnChanges{
+export class WorkoutDetailComponent implements OnInit{
 
   @Input() workout: Workout;
-
-  workoutForm: FormGroup;
-
+  @Output() close = new EventEmitter();
+  error: any;
+  navigated = false;
 
   constructor(
-  	private fb: FormBuilder,
-  	private workoutService: WorkoutsService) {
+    private workoutService: WorkoutsService,
+    private route: ActivatedRoute)
+    { }
 
-
-  	this.createForm();
-
+  ngOnInit(): void {
+    this.route.params.forEach((params: Params)=> {
+      if (params['id'] !== undefined) {
+        const id = +params['id'];
+        this.navigated = true;
+        this.workoutService.getWorkout(id)
+            .then(workout => this.workout = workout)
+      } else {
+        this.navigated = false;
+        this.workout = new Workout();
+      }
+    });
   }
-
-  createForm() {
-  	this.workoutForm = this.fb.group({
-  		name: ['', Validators.required ],
-  	});
-  }
-
-  ngOnChanges() {
-  	this.workoutForm.reset({
-  		name: this.workout.name
-  	});
-  }
-
-  onSubmit() {
-  	this.workout = this.prepareSaveWorkout();
-  	this.workoutService.updateWorkout(this.workout).subscribe();
-  	this.ngOnChanges()  
-  }
-  
-  prepareSaveWorkout(): Workout {
-  	const formModel = this.workoutForm.value;
-  	console.log(this.workoutForm.value)
-  	const saveWorkout: Workout = {
-  	  id: this.workout.id,
-  	  name: formModel.name as string
-  	};
-  	return saveWorkout;
-  }
-
-};
  
+  save(): void {
+    this.workoutService
+        .save(this.workout)
+        .then(workout => {
+          this.workout = workout;
+          this.goBack(workout);
+        })
+        .catch(error => this.error = error);
+  }
+
+  goBack(savedWorkout: Workout = null): void {
+    this.close.emit(savedWorkout);
+    if (this.navigated) { window.history.back(); }
+  }
+}

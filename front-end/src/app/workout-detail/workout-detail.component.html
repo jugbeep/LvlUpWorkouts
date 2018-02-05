@@ -1,14 +1,12 @@
-<h2>Workout Detail</h2>
-<form [formGroup]="workoutForm" (ngSubmit)="onSubmit()" novalidate>
-  <div class="form-group">
-    <label class="center-block">Name:
-      <input class="form-control" formControlName="name">
-    </label>
+<div *ngIf="workout">
+  <h2>{{workout.name}} details!</h2>
+  <div>
+    <label>id: </label>{{workout.id}}</div>
+  <div>
+    <label>name: </label>
+    <input [(ngModel)]="workout.name" placeholder="name" />
   </div>
-  <button type="submit"
-            [disabled]="workoutForm.pristine" class="btn btn-success">Save</button> &nbsp;
-  <button type="reset" (click)="revert()"
-            [disabled]="workoutForm.pristine" class="btn btn-danger">Revert</button>
-</form>
-<p>Form value: {{workoutForm.get('name').value }}</p>
-<p>Form status: {{workoutForm.status | json }}</p>
+  <button (click)="goBack()">Back</button>
+  <button (click)="save()">Save</button>
+</div>
+

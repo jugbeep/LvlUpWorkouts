@@ -11,7 +11,9 @@ import { WorkoutsComponent } from './workouts/workouts.component';
 import { AboutComponent } from './about/about.component';
 import { SplashComponent } from './splash/splash.component'; //added for first page seen
 import { HomeComponent } from './homepage/homepage.component';
+import { WorkoutListComponent } from './workout-list/workout-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { WorkoutDetailComponent } from './workout-detail/workout-detail.component';
 
 
 const routes: Routes = [
@@ -22,10 +24,12 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'start', component: HomeComponent }, //changed from home to start for second route hit
   { path: 'monster', component: MonsterComponent},
-  { path: 'workouts', component: WorkoutsComponent },
-  { path: '*', component: PageNotFoundComponent },
+  { path: 'workouts', component: WorkoutListComponent },
+  { path: 'detail/:id', component: WorkoutDetailComponent }, 
   { path: 'about', component: AboutComponent},
-  { path: 'stats', component: WorkoutStatisticsComponent}
+  { path: 'stats', component: WorkoutStatisticsComponent},
+  { path: '*', component: PageNotFoundComponent }
+
 ];
 
 @NgModule({
