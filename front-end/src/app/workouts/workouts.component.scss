@@ -1,5 +1,6 @@
 .selected {
   background-color: #CFD8DC !important;
+  background-color: rgb(0,120,215) !important;
   color: white;
 }
 .workouts {
@@ -44,4 +45,11 @@
   height: 1.8em;
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
+}
+.error {color:red;}
+button.delete-button{
+  float:right;
+  background-color: gray !important;
+  background-color: rgb(216,59,1) !important;
+  color:white;
 }
