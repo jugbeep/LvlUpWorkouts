@@ -10,11 +10,15 @@ let workOutActivities = require('../controllers/workOutActivitiesTabel.js');
 let individualWorkouts = require('../controllers/individualWorkoutsTavel.js')
 
 
+/************
+/	test	/
+************/
+
 //test
-// router.get('/', function(req, res){
-// 	console.log("better test")
-// 	res.send('bettr test');
-// });
+router.get('/', function(req, res){
+	console.log("better test")
+	res.send('bettr test');
+});
 
 /****************************
 *	routs for user tabel 	*

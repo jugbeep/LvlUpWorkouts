@@ -1,6 +1,6 @@
 //bringing stuff in form mdels
 db = require('../models');
-let WorkOutActivities = db.models.workOutActivities;
+let WorkOutActivities = db.models.WorkOutActivities;
 
 //get all
 function sendAll(req, res) {

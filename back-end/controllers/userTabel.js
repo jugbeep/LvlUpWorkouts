@@ -1,6 +1,6 @@
 //bringing stuff in form mdels
 db = require('../models');
-let User = db.models.user;
+let User = db.models.User;
 
 //get all
 function sendAll(req, res) {

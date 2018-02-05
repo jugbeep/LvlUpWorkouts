@@ -2,12 +2,6 @@
 //requireing
 var DB = require("../models").models;
 
-/****************
-*	dummy data	*
-****************/
-
-
-
 /************************
 	sets up the users	*
 ************************/
@@ -15,7 +9,7 @@ var DB = require("../models").models;
 let userCreate = function(){
 	return DB.User.create(
 		{
-			name: 'Sassan'
+			name : 'Sassan'
 		}
 	)
 		.then(
