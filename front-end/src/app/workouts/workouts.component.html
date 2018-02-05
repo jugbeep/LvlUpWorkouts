@@ -11,14 +11,37 @@
 </div>
  
 <ul class="workouts">
-  <li *ngFor="let workout of workouts">
-    <a routerLink="/detail/{{workout.id}}">
-      <span class="badge">{{workout.id}}</span> {{workout.name}}
-      <span> <button class="delete" title="delete workout"
-    (click)="delete(workout)">Delete</button> </span>
-    </a>
+  <li *ngFor="let workout of workouts" >
+    <div *ngIf="workoutToEdit !== workout">
+      {{workout.id}} - {{workout.name}}
+      <button (click)="delete(workout)">
+        Delete
+      </button>
+      <button (click)="updateWorkout(workout)" routerLink="/detail/{{workout.id}}">
+        Edit
+      </button>
+     <!--  <span class="badge">{{workout.id}}</span> {{workout.name}}
+      <button class="delete" title="delete workout"
+    (click)="delete(workout)">Delete</button> -->
+
     
+    </div>
+
+
   </li>
 </ul>
+ <button routerLink="/logout" routerLinkActive="active" class="logout-account-txt btn-lg move">Logout Account</button> 
+
+<!-- <li *ngFor="let comment of comments">
+    <div *ngIf="commentToEdit !== comment">
+      {{comment.comment}} - {{comment.author}}
+
+      <button (click)="deleteComment(comment)">
+        Delete
+      </button>
+      <button (click)="makeCommentEditable(comment)">
+        Edit
+      </button>
+    </div> -->
 
 
