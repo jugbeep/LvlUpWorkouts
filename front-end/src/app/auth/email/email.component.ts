@@ -16,17 +16,25 @@ export class EmailComponent implements OnInit {
   ngOnInit() {}
 
   onSubmit(formData) {
-  	if (formData.valid && passwordSecure(formData.value.password) ) {
-  		console.log(formData.value);
+    //this is the begingig of the stuff i need to mess with
+    	
+    if( passwordSecure(formData.value.password) ){
+      console.log("your password is good");
 
-      this.authService.login(
-  			formData.value.email,
-  			formData.value.password
-  			);
-  		}else{
-        console.log("NOPE YOUR PASSWORD IS NO GOOD HEAR ---- emailcomonent.ts line 27 ");
-      }
-  	}
+      if (formData.valid) {
+    		console.log(formData.value);
+        this.authService.login(
+    			formData.value.email,
+    			formData.value.password
+    			);
+    	}
+    
+    }else{
+      console.log("your password is no good")
+    }
+    
+    //this is the end of the stuff i need to mess with
+    }
 }
 
 
@@ -95,5 +103,6 @@ function passwordSecure( password : string ){
         console.log("hasUpCase: " + hasUpCase);
         return false;
       }
+
+    }
   }
-}

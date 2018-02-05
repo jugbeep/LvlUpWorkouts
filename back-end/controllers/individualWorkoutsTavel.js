@@ -1,6 +1,6 @@
 //bringing stuff in form mdels
 db = require('../models');
-let IndividualWorkouts = db.models.individualWorkouts;
+let IndividualWorkouts = db.models.IndividualWorkouts;
 
 //get all
 function sendAll(req, res) {

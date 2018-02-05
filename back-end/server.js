@@ -17,7 +17,7 @@ const bodyParser = ('body-parser');
 
 //let sequelize = new Sequelize('postgres://' + name + '@localhost:5432/dnddatabase');		//this is now in models/index.js 
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 //app.use set up
 //app.use(bodyParser.json());																//this was braking i got rid of it has not broke net. 
