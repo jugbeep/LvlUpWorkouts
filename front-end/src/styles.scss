@@ -39,7 +39,7 @@ $gold: rgba(255, 178, 94, 1);
 	color:#fff;
 
 	&:hover {
-		// border-color:$gold;
+		border-color:none;
 		color:$gold;
 		@include animation(shakeThatBooty 0.3s linear 1);		
 	}
