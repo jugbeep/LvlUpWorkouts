@@ -22,7 +22,10 @@ onSubmit(formData) {
     this.authService.login(
 		formData.value.email,
    	formData.value.password
-  	);
+  	)
   }
 }
+}
+
+
 
