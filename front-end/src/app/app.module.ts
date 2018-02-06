@@ -6,13 +6,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+
+//import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { environment } from '../environments/environment';
 
 import { WorkoutDataService } from './data-model.service'
 import { WorkoutsService } from './workouts.service';
 import { AuthService } from './auth.service';
+import { DbService } from './db.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './homepage/homepage.component';
@@ -74,11 +76,11 @@ export const firebaseConfig = {
     ReactiveFormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
-    InMemoryWebApiModule.forRoot(WorkoutDataService, { dataEncapsulation: false }),
+    //InMemoryWebApiModule.forRoot(WorkoutDataService, { dataEncapsulation: false }),
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
 
-  providers: [ AuthService, WorkoutsService ],
+  providers: [ AuthService, WorkoutsService, DbService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

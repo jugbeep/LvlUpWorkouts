@@ -1,4 +1,5 @@
 .jumbotron {
+
   background-color: rgba(235, 239, 249, .08);
 }
 
@@ -28,6 +29,19 @@ input, button  {
 div.col-12 {
   padding: 2em;
   width:60%;
+  margin-left: -3vw;
+}
+
+button, input {
+  border: 1px solid black;
+  border-radius: 5px;
+  backgtound-color: red;
+}
+
+.col-12 {
+  padding: 2em;
+  border: 1px solid black;
+  border-radius: 5px;
 } 
 
 .logout {
@@ -56,7 +70,6 @@ button:hover {
   border: none;
   border-radius: 5px;
 }
-
 
 img {
   padding-top: 30px;

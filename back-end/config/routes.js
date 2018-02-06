@@ -16,8 +16,18 @@ let individualWorkouts = require('../controllers/individualWorkoutsTavel.js')
 
 //test
 router.get('/', function(req, res){
-	console.log("better test")
-	res.send('bettr test');
+	console.log('hit the get route')
+	console.log(req.params.email)
+	console.log(req.body.email)
+	res.json(req.body);
+});
+
+router.post('/', function(req, res){
+	console.log("you hit the post")
+	console.log(req.params.email)
+	console.log(req.body.email)
+	console.log(req.body)
+	res.send(req.body.email);
 });
 
 /****************************

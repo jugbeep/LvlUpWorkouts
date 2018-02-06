@@ -8,7 +8,7 @@
 		    <ul class="navbar-nav mr-auto">
 		        <li class="nav-item active">		        	
 		        	<form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
-						<input type="text" placeholder="email address" (ngModel)="email" name="email" class="input-txt" required>
+						<input type="text" placeholder="Email Address" (ngModel)="email" name="email" class="input-txt" required>
 						<input type="password" placeholder="Password" (ngModel)="password" name="password" class="input-txt" required>
 						<button type="submit" [disabled]="!formData.valid" class="auth-btn submit">Log in</button>
 					</form>

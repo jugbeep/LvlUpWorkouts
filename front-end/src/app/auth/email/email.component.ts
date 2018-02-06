@@ -15,22 +15,15 @@ export class EmailComponent implements OnInit {
 
   ngOnInit() {}
 
-  onSubmit(formData) {
-    //this is the begingig of the stuff i need to mess with
-    	
-    
-
-      if (formData.valid) {
-    		console.log(formData.value);
-        this.authService.login(
-    			formData.value.email,
-    			formData.value.password
-    			);
-    	}
-    
-    
-    
-    //this is the end of the stuff i need to mess with
-    }
+onSubmit(formData) {
+    //this is the begingig of the stuff i need to mess witj
+  if (formData.valid) {
+ 	  console.log(formData.value);
+    this.authService.login(
+		formData.value.email,
+   	formData.value.password
+  	);
+  }
+}
 }
 

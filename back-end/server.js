@@ -5,7 +5,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const path = require('path');
-const bodyParser = ('body-parser');
+const bodyParser = require('body-parser');
 //let Sequelize = require('sequelize');														//this is now in models/index.js 
 
 /********************************
@@ -17,10 +17,11 @@ const bodyParser = ('body-parser');
 
 //let sequelize = new Sequelize('postgres://' + name + '@localhost:5432/dnddatabase');		//this is now in models/index.js 
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 
 //app.use set up
-//app.use(bodyParser.json());																//this was braking i got rid of it has not broke net. 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());																//this was braking i got rid of it has not broke net. 
 
 
 //for heroku
