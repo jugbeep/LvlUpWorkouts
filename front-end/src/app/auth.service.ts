@@ -4,13 +4,17 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/switchMap';
+import { Http } from '@angular/http';
 
 @Injectable()
 export class AuthService {
 
   constructor(
   	private afAuth: AngularFireAuth,
-  	private router: Router) { }
+  	private router: Router,
+    private http: Http
+    ) { }
+
 
   	login(email: string, password: string) {
   	  this.afAuth.auth.signInWithEmailAndPassword(email, password)
@@ -25,10 +29,11 @@ export class AuthService {
     }
 
   	emailSignup(email: string, password: string) {
+    
     this.afAuth.auth.createUserWithEmailAndPassword(email, password)
     .then(value => {
       console.log('Success', value);
-      this.router.navigateByUrl('/workouts');
+      this.router.navigateByUrl('/workouts')
     })
     .catch(error => {
       console.log('Something went wrong: ', error);
