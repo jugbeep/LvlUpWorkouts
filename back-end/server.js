@@ -20,7 +20,7 @@ const bodyParser = require('body-parser');
 const port = process.env.PORT || 3000;
 
 //app.use set up
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));		//dont thnk we need this
 app.use(bodyParser.json());																//this was braking i got rid of it has not broke net. 
 
 
