@@ -1,17 +1,23 @@
-.container {
-	text-align: center;
-}
-
 .jumbotron{
- 	background: radial-gradient(circle, #ccffff, #1affff);
+ 	background: rgba(255, 255, 255, .5);
+}
+.flex-container {
+    text-align: center;
+    /*background-color: rgba(248, 249, 250, 1);*/
 }
 
-h1 {
-  font-size: 36px;
+h2 {
+  font-size: 30px;
   font-family: 'Rammetto One', cursive;
+  color: rgba(85, 95, 119, 1);
+  padding-top: 10px;
 }
 
 p {
    font-size: 18px;
+   padding: 5px;
 }
 
+button {
+  margin-bottom: 20px;
+}
