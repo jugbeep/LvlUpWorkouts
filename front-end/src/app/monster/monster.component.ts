@@ -20,11 +20,10 @@ export class MonsterComponent implements OnInit {
 
   findMonster() {
 		// console.log('I want to search http://dnd5eapi.co/api/');
-    this.http.get('http://dnd5eapi.co/api/monsters/') //Works
-    
-		.toPromise()
-		// .then(response => console.log(response.json().results));
-		.then(response => this.results = response.json().results);
+    this.http.get('http://dnd5eapi.co/api/monsters/3') //Works
+		//.toPromise()
+		// .subscribe(response => console.log(response.json()));
+		.subscribe(response => this.results = response.json());
 	}
 
 }
