@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../auth.service';
+import { DbService } from '../../db.service'
 
 @Component({
   selector: 'app-signup',
@@ -7,20 +8,27 @@ import { AuthService } from '../../auth.service';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
+  
+  newUser = <any>{};
 
   constructor(
-  	public authService: AuthService) { }
+  	public authService: AuthService,
+    public dbService: DbService
+    ) { }
 
   ngOnInit() { }
 
-  onSubmit(formData) {
-  	if (formData.valid) {
-  		console.log(formData.value);
+  onSubmit(newUser) {
+    console.log(newUser);
+  	if (newUser.valid) {
+  		console.log(newUser.value);
   		this.authService.emailSignup(
-  			formData.value.email,
-  			formData.value.password
-  			);
+  			newUser.value.email,
+  			newUser.value.password
+  			)
   		}
+      this.dbService.userSignup(newUser)
+      }
   	}
 }
 
