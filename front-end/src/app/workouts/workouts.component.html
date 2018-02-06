@@ -15,7 +15,7 @@
           <div *ngIf="workoutToEdit !== workout">
             {{workout.id}} - {{workout.name}}
             <button (click)="delete(workout)" class="delete">Delete</button>
-            <button (click)="updateWorkout(workout)" class="update" routerLink="/detail/{{workout.id}}">Edit</button>    
+            <button (click)="onSelect(workout)" class="update" routerLink="/detail/{{workout.id}}">Edit</button>    
           </div>
         </li>
       </ul>

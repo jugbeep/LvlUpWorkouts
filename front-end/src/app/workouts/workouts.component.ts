@@ -31,6 +31,11 @@ export class WorkoutsComponent implements OnInit {
         .subscribe(workouts => this.workouts = workouts);
   }
 
+  // updateWorkout(): void {
+  //   this.workoutsService.updateWorkout()
+  //       .subscribe(workouts => this.workouts = workouts)
+  // }
+
   add(name: string): void {
      name = name.trim();
      if (!name) { return; }
@@ -61,10 +66,10 @@ export class WorkoutsComponent implements OnInit {
   //   .catch(error => this.error = error);
   // }
 
-  // onSelect(workout: Workout): void {
-  //   this.selectedWorkout = workout;
-  //   this.addingWorkout = false;
-  // }
+  onSelect(workout: Workout): void {
+    this.selectedWorkout = workout;
+    this.addingWorkout = false;
+  }
 
   // gotoDetail(): void {
   //   this.router.navigate(['/detail', this.selectedWorkout.id])

@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
-//import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { environment } from '../environments/environment';
 
@@ -76,7 +76,7 @@ export const firebaseConfig = {
     ReactiveFormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
-    //InMemoryWebApiModule.forRoot(WorkoutDataService, { dataEncapsulation: false }),
+    InMemoryWebApiModule.forRoot(WorkoutDataService, { dataEncapsulation: false }),
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
 

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient } from "@angular/common/http";
-
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { catchError, map, tap } from 'rxjs/operators';
@@ -36,13 +35,6 @@ export class WorkoutsService {
       catchError(this.handleError<Workout>(`getWorkout id=${id}`))
       );
   }
-
-  // save(workout: Workout): Promise<Workout> {
-  //   if (workout.id) {
-  //     return this.put(workout);
-  //   }
-  //   return this.post(workout)
-  // }
 
   updateWorkout(workout: Workout): Observable<any> {
     return this.http.put(this.workoutsUrl, workout, httpOptions).pipe(
