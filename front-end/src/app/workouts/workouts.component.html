@@ -1,14 +1,15 @@
 <div class="jumbotron">
-  <div class="row">
-    <div class="col-12">
+  <div class="container">
+   <div class="row">
+    <div class="col-xxs-12 col-sm-6 col xx-3 m-b-xxl">
       <h2>Workouts for {{''}}</h2>       
-      <div>
+ <!--      <div> -->
         <label>Activity name:
           <input #activityName />
         </label>
         <!-- (click) passes input value to add() and then clears the input -->
         <button (click)="add(activityName.value); activityName.value=''">Add</button>
-      </div>
+    <!--   </div> -->
        
       <ul class="workouts">
         <li *ngFor="let workout of workouts" >
@@ -19,13 +20,23 @@
           </div>
         </li>
       </ul>
-      
+
       <div>
-        <button (click)="logout()" routerLink="/home" routerLinkActive="active" class="logout btn-lg move">Logout Account</button> 
+        <button (click)="logout()" routerLink="/stats" routerLinkActive="active" class="logout btn-lg move">Logout Account</button> 
       </div>
-    
+    </div><!--end column one-->
+
+
+  <div class="row">
+    <div class="col-xxs-12 col-sm-6 col xx-3 m-b-xxl"><!-- column two-->
+         <!--can add battle or w/o text here-->
+        <img src="./assets/images/monster7.png" alt="scary octopus monster">
     </div>
   </div>
-</div>
+       
+
+     </div><!--end row--> 
+  </div><!--end container-->
+</div><!--end jumbotron-->
 
 
