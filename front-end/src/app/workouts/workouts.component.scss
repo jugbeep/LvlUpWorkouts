@@ -2,15 +2,27 @@
   background-color: rgba(235, 239, 249, .08);
 }
 
+ul {
+  color: rgba(85, 95, 119, 1);
+}
+h2 {
+  color: rgba(85, 95, 119, 1);
+ }
+
+label {
+  color: rgba(85, 95, 119, 1);
+ }
+
 li {
   margin-top: 2vh;
   list-style: none;
-  margin-left: -3vw;
+  margin-left: -2vw;
 }
 
-button, input {
+input, button  {
   border: 1px solid rgba(85, 95, 119, 1);
   border-radius: 5px;
+  text-transform: uppercase;
 }
 
 div.col-12 {
@@ -23,3 +35,31 @@ div.col-12 {
   border: none;
 }
 
+button:hover {
+  background-color: rgba(248, 192, 132, .5);
+}
+
+.update {
+  background-color: rgba(248, 192, 132, 1);
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+}
+
+.delete {
+  background-color: rgba(248, 192, 132, 1);
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+}
+
+
+img {
+  padding-top: 30px;
+  width: 300px;
+  height: 300px;
+}
