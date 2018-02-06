@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Http } from '@angular/http';
 
 @Injectable()
 export class DbService {
 
-  url = 'http://localhost:3000';
+  url: string = 'http://localhost:3000';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: Http) { }
 
   userSignup(newUser) {
   	console.log('hit new user signup')
