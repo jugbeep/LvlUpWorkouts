@@ -1,3 +1,37 @@
-<p>
-  monster works!
-</p>
+  <div class="jumbotron">
+    	<div class="container">
+          <div class="row">
+             <div class="col-centered"><!--one column-->
+                  <h2>Out From The Darkness</h2>
+                 <img src="./assets/images/monster6.png" alt="workout monster">
+                 <h3 class="text-md text-bold">You have encountered a Dragon</h3>
+                 <p class="orange" >Sprint for 2 minutes to get RPG-Fit.</p>
+             </div>
+          </div> 
+
+          <div class="row">
+             <div class="col-centered"><!--one column-->
+                <button routerLink="/stats" routerLinkActive="active" class="about-the-team btn-lg move">Done</button> 
+             </div>
+          </div> 
+<p class="sm">Find Your First Monster to Defeat</p>
+
+<input  (click)="findMonster()" class="btn" type="submit" value="Find Monster">
+
+<section *ngIf='results'>
+    <h2>Monsters Found</h2>
+        <ul>
+            <li *ngFor='let monster of results'>
+                <dt>{{monster.name}}</dt>
+            </li>
+        </ul>
+</section>
+
+
+
+         
+      </div> <!--end container-->   
+       
+	</div>  
+
+
