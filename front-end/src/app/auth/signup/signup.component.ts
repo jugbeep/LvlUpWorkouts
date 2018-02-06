@@ -25,10 +25,11 @@ export class SignupComponent implements OnInit {
   		this.authService.emailSignup(
   			newUser.value.email,
   			newUser.value.password
-  			)
-  		}
-      this.dbService.userSignup(newUser)
-      }
+  		)
   	}
+      
+    this.dbService.userSignup(newUser)
+  }
 }
+
 
