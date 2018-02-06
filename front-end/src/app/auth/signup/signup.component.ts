@@ -30,5 +30,5 @@ export class SignupComponent implements OnInit {
       this.dbService.userSignup(newUser)
       }
   	}
-}
+
 
