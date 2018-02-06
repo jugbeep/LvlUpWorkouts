@@ -1,12 +1,12 @@
 .jumbotron {
   background: rgba(255, 255, 255, .5);
-  font-family: 'Rammetto One', cursive;
+  font-family: 'Rammetto One', cursive;  
   color: rgba(85, 95, 119, 1);
   margin: 0;
 }
 
 .container {
-  text-align: center;
+  text-align: center;  
   background: rgba(255, 255, 255, .5);
 }
 
@@ -27,7 +27,7 @@ img {
   height: 300px;
 }
 
-h3, .h3 {
+h3 {
   font-family: 'Open Sans', sans-serif;
   padding-top: 10px;
   font-weight: bold;
@@ -39,15 +39,5 @@ h3.text-md text-bold {
   font-style: bold;
 }
 
-button {
-	background-color: rgba(132, 141, 161, .70);
-	font-family: 'Open Sans', sans-serif;
-	border: none;
-	color: white;
-	padding: 15px 32px;
-	text-decoration: none;
-	display: inline;
-	font-size: 16px;
-	margin-top: 50px;
-}
+
 

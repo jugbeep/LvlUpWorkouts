@@ -2,7 +2,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 
-$red:#F44336;
+$gold: rgba(255, 178, 94, 1);
 @mixin transition($in) {
 	transition:$in;
 	-webkit-transition:$in;
@@ -29,9 +29,9 @@ $red:#F44336;
 	outline:none;
 	border:none;
 	cursor:pointer;
-	background-color: black;
+	background-color: rgba(85, 95, 119, .8);
 	border:2px solid #fff;
-
+	
 	@include transition(all 0.5s ease);
 }
 
@@ -39,8 +39,8 @@ $red:#F44336;
 	color:#fff;
 
 	&:hover {
-		border-color:$red;
-		color:$red;
+		// border-color:$gold;
+		color:$gold;
 		@include animation(shakeThatBooty 0.3s linear 1);		
 	}
 }

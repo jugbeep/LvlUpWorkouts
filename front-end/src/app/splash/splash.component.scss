@@ -1,14 +1,15 @@
+.jumbotron{
+ 	background: white;
+}
+
 .container {
 	text-align: center;
 }
 
-.jumbotron{
- 	background: radial-gradient(circle, #ccffff, #1affff);
-}
-
-h1 {
+h2 {
   font-size: 36px;
   font-family: 'Rammetto One', cursive;
+  color: rgba(85, 95, 119, 1);
 }
 
 p {
