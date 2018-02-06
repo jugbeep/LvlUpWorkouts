@@ -11,8 +11,9 @@ export class DbService {
   userSignup(newUser) {
   	console.log('hit new user signup')
   	console.log(newUser.email)
-  	return this.http.get(`${this.url}`);	
-  }
+  	this.http.post(`${this.url}`, newUser)	
+  		.subscribe(res => console.log(res))
+  };
  
 
 }
