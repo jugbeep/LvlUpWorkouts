@@ -21,7 +21,7 @@ Kevin James https://github.com/trumpetcoder
 Laura Johnson https://github.com/nemazeelaura
 Sassan Kermani https://github.com/sassankermani
 
-RPG-UpFit
+RPG-UpFit Elevator Pitch
 *****************************************************************************
 
 Exercise app that will allow users to battle against a dungeon and dragons' character for workout motivation. The user will pick their work out ahead of time from a slider of characters and will have special challenges along the way that they will check off at the end of their workout if they accomplish them. The user will get a status update of how they stack up against the monster and a prompt to come back again the next day. Having a monster to battle against will motivate people to work out more. Geared towards people that like video games.
