@@ -4,7 +4,7 @@ Github Link
 https://github.com/jugbeep/LvlUpWorkouts
 
 Link to Wireframe
-https://github.com/jugbeep/LvlUpWorkouts/tree/master/front-end/wireframe.png
+https://github.com/jugbeep/LvlUpWorkouts/blob/master/wireframe_png.png
 
 Trello: User Stories
 https://trello.com/b/NEhMod29/rpgupfit
@@ -13,6 +13,7 @@ Link to Heroku
 https://rpg-up-fit.herokuapp.com/
 
 Link to data models ERD
+https://github.com/jugbeep/LvlUpWorkouts/blob/master/erd.jpg
 
 CONTRIBUTORS: 
 Patrick Botkins https://github.com/jugbeep
