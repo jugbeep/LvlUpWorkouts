@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Workout } from './workout';
 import { WorkoutsService } from '../workouts.service';
 import { Observable } from 'rxjs/observable';
+import { DbService } from '../db.service';
 
 
 @Component({
@@ -13,6 +14,7 @@ import { Observable } from 'rxjs/observable';
 
 export class WorkoutsComponent implements OnInit {
 
+  userName:  {};
   workouts: Workout[];
   selectedWorkout: Workout;
   addingWorkout: boolean;
@@ -30,6 +32,11 @@ export class WorkoutsComponent implements OnInit {
     this.workoutsService.getWorkouts()
         .subscribe(workouts => this.workouts = workouts);
   }
+
+  // updateWorkout(): void {
+  //   this.workoutsService.updateWorkout()
+  //       .subscribe(workouts => this.workouts = workouts)
+  // }
 
   add(name: string): void {
      name = name.trim();
@@ -61,10 +68,10 @@ export class WorkoutsComponent implements OnInit {
   //   .catch(error => this.error = error);
   // }
 
-  // onSelect(workout: Workout): void {
-  //   this.selectedWorkout = workout;
-  //   this.addingWorkout = false;
-  // }
+  onSelect(workout: Workout): void {
+    this.selectedWorkout = workout;
+    this.addingWorkout = false;
+  }
 
   // gotoDetail(): void {
   //   this.router.navigate(['/detail', this.selectedWorkout.id])

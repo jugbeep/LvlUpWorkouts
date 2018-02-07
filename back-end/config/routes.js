@@ -4,7 +4,9 @@ console.log('some stuff');
 let express = require('express');
 let router = express.Router();
 
-//controlers for stuff
+
+//controlers for stuff 
+
 let userTabelController = require('../controllers/userTabel.js');
 let workOutActivities = require('../controllers/workOutActivitiesTabel.js');
 let individualWorkouts = require('../controllers/individualWorkoutsTavel.js')
@@ -15,14 +17,14 @@ let individualWorkouts = require('../controllers/individualWorkoutsTavel.js')
 ************/
 
 //test
-router.get('/', function(req, res){
+router.get('/', function(req, res) {
 	console.log('hit the get route')
 	console.log(req.params.email)
 	console.log(req.body.email)
-	res.json(req.body);
+	res.json( "its up " + req.body);
 });
 
-router.post('/', function(req, res){
+router.post('/', function(req, res) {
 	console.log("you hit the post")
 	console.log(req.params.email)
 	console.log(req.body.email)
@@ -40,13 +42,16 @@ router.get('/api/userTabel', userTabelController.sendAll);
 router.get('/api/userTabel/:id', userTabelController.sendOne);
 
 //post rout/ creat new user
-router.post('api/userTabel', userTabelController.create);
+router.post('/api/userTabel', userTabelController.create);
 
 //update rout/ update user information
-router.put('api/userTabel', userTabelController.update);
+router.put('/api/userTabel', userTabelController.update);
 
 //delete rout/ delet user
-router.delete('api/userTabel', userTabelController.destroy);
+router.delete('/api/userTabel', userTabelController.destroy);
+
+//log in
+router.post('/api/userTabel/cheack', userTabelController.cheack);
 
 
 /************************************
@@ -62,11 +67,13 @@ router.get('/api/workoutActivitysTabel/:id', workOutActivities.sendOne);
 router.post('api/workoutActivitysTabel', workOutActivities.create);
 
 //update rout/ update workout activitys information
-router.put('api/workoutActivitysTabel', workOutActivities.update);
+router.put('api/workoutActivitysTabel/:id', workOutActivities.update);
 
 //delete rout/ delet workout activitys
 router.delete('api/workoutActivitysTabel', workOutActivities.destroy);
 
+// make uneek workout 
+//router.post('api/workoutActivitysTabel/make', workOutActivities.make);
 
 /************************************
 *	routs for individual workouts 	*

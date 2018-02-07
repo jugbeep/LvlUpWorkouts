@@ -29,7 +29,7 @@ function create(req, res) {
 //updates individualWorkouts
 function update(req, res) {
     IndividualWorkouts.findById(req.params.id)
-        .then(function(song){
+        .then(function(individualWorkouts){
             if(!individualWorkouts) res.send(" individualWorkouts is not found ")
             else return individualWorkouts.updateAttrivutes(req.body);
         })
@@ -41,7 +41,7 @@ function update(req, res) {
 //delets individualWorkouts
 function destroy(req, res) {
     IndividualWorkouts.findById(req.params.id)
-        .then(function(song){
+        .then(function(individualWorkouts){
             if(!individualWorkouts) res.send(" individualWorkouts is not found ");
             else return individualWorkouts.destroy();
         })
@@ -49,6 +49,8 @@ function destroy(req, res) {
             res.send("individualWorkouts deleted.")
         })
 };
+
+
 
 module.exports.sendAll = sendAll;
 module.exports.sendOne = sendOne;

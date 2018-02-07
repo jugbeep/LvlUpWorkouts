@@ -1,3 +1,4 @@
+
  .jumbotron {
  	color: rgba(85, 95, 119, 1);
 /*    color: rgba(61, 69, 86, 1);*//* darker color type for this page*/
@@ -43,5 +44,15 @@ ul {
 }
 .challenge {
   color: white;
+}
+
+input.btn {
+	border: 0;
+	display: block;
+	padding: 1em 3em;
+	background: #A5F883;
+	color: #003A61;
+	margin-bottom: 1em;
+	cursor: pointer;
 }
 
