@@ -4,6 +4,7 @@ console.log('some stuff');
 let express = require('express');
 let router = express.Router();
 
+
 //controlers for stuff
 let userTabelController = require('../controllers/userTabel.js');
 let workOutActivities = require('../controllers/workOutActivitiesTabel.js');
@@ -19,7 +20,7 @@ router.get('/', function(req, res) {
 	console.log('hit the get route')
 	console.log(req.params.email)
 	console.log(req.body.email)
-	res.json(req.body.email);
+	res.json( "its up " + req.body);
 });
 
 router.post('/', function(req, res) {
@@ -40,13 +41,13 @@ router.get('/api/userTabel', userTabelController.sendAll);
 router.get('/api/userTabel/:id', userTabelController.sendOne);
 
 //post rout/ creat new user
-router.post('api/userTabel', userTabelController.create);
+router.post('/api/userTabel', userTabelController.create);
 
 //update rout/ update user information
-router.put('api/userTabel', userTabelController.update);
+router.put('/api/userTabel', userTabelController.update);
 
 //delete rout/ delet user
-router.delete('api/userTabel', userTabelController.destroy);
+router.delete('/api/userTabel', userTabelController.destroy);
 
 
 /************************************

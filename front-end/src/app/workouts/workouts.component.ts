@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Workout } from './workout';
 import { WorkoutsService } from '../workouts.service';
 import { Observable } from 'rxjs/observable';
+import { DbService } from '../db.service';
 
 
 @Component({
@@ -13,6 +14,7 @@ import { Observable } from 'rxjs/observable';
 
 export class WorkoutsComponent implements OnInit {
 
+  userName:  {};
   workouts: Workout[];
   selectedWorkout: Workout;
   addingWorkout: boolean;
