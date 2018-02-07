@@ -23,20 +23,20 @@ function sendOne(req, res) {
 //make a new user
 function create(req, res) {
 
-    console.log(" ");
-    console.log( "req: " + req);
-    console.log(" ");
-    console.log("req.body: " + req.body);
-    console.log(" ")
-    console.log("req.email: " + req.email);
-    console.log(" ")
+    // console.log(" ");
+    // console.log( "req: " + req);
+    // console.log(" ");
+    // console.log("req.body: " + req.body);
+    // console.log(" ")
+    // console.log("req.email: " + req.email);
+    // console.log(" ")
     let temp2 = req.body.email;
-    console.log( "req.body.email: " + temp2);
-    console.log(" ")
-    console.log("req.password: " + req.password);
-    console.log(" ")
-    console.log( "req.body.password: " + req.body.password);
-    console.log(" ")
+    // console.log( "req.body.email: " + temp2);
+    // console.log(" ")
+    // console.log("req.password: " + req.password);
+    // console.log(" ")
+    // console.log( "req.body.password: " + req.body.password);
+    // console.log(" ")
 
     let temp = {
         name : temp2
@@ -72,8 +72,23 @@ function destroy(req, res) {
         })
 };
 
+//cheack
+function cheack(req, res){
+    User.findAll({
+        where: {
+            name: req.body.email
+        }
+    })
+        .then(function(user){
+            if(!user) res.send("there is no acout with this user name");
+            else res.json(user);
+        });
+    
+}
+
 module.exports.sendAll = sendAll;
 module.exports.sendOne = sendOne;
 module.exports.create = create;
 module.exports.update = update;
 module.exports.destroy = destroy;
+module.exports.cheack = cheack;
