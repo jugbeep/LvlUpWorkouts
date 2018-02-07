@@ -11,6 +11,7 @@ const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
+
 @Injectable()
 export class WorkoutsService {
   
@@ -37,8 +38,7 @@ export class WorkoutsService {
   }
 
   updateWorkout(workout: Workout): Observable<any> {
-    const url = `${this.workoutsUrl}/${workout.id}`
-    return this.http.put(url, workout).pipe(
+    return this.http.put(this.workoutsUrl, workout, ).pipe(
       tap(_ => this.log(`updated workout id=${workout.id}`)),
       catchError(this.handleError<any>('updateWorkout'))
       );
