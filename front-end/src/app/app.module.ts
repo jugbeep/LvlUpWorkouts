@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http'; 
 import { HttpClientModule } from '@angular/common/http';
@@ -11,7 +11,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { environment } from '../environments/environment';
 
-import { WorkoutDataService } from './data-model.service'
+//import { WorkoutDataService } from './data-model.service'
 import { WorkoutsService } from './workouts.service';
 import { AuthService } from './auth.service';
 import { DbService } from './db.service';

@@ -16,14 +16,14 @@ let individualWorkouts = require('../controllers/individualWorkoutsTavel.js')
 ************/
 
 //test
-router.get('/', function(req, res){
+router.get('/', function(req, res) {
 	console.log('hit the get route')
 	console.log(req.params.email)
 	console.log(req.body.email)
 	res.json( "its up " + req.body);
 });
 
-router.post('/', function(req, res){
+router.post('/', function(req, res) {
 	console.log("you hit the post")
 	console.log(req.params.email)
 	console.log(req.body.email)
@@ -63,7 +63,7 @@ router.get('/api/workoutActivitysTabel/:id', workOutActivities.sendOne);
 router.post('api/workoutActivitysTabel', workOutActivities.create);
 
 //update rout/ update workout activitys information
-router.put('api/workoutActivitysTabel', workOutActivities.update);
+router.put('api/workoutActivitysTabel/:id', workOutActivities.update);
 
 //delete rout/ delet workout activitys
 router.delete('api/workoutActivitysTabel', workOutActivities.destroy);
