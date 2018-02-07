@@ -25,12 +25,22 @@ $gold: rgba(255, 178, 94, 1);
 	-ms-animation:$in;
 }
 
+button:focus {outline:0 !important;} /*got rid of blue outline when buttons are selected*/
+
+*:focus {
+    outline: none;  /*takes out blue outline on other elements*/
+
+}
+textarea:focus, input:focus{  /*takes out blue outline on input fields*/
+    outline: none;
+}
+
+
 .btn-lg {
 	outline:none;
 	border:none;
 	cursor:pointer;
 	background-color: rgba(85, 95, 119, .8);
-	border:2px solid #fff;
 	
 	@include transition(all 0.5s ease);
 }

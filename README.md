@@ -10,7 +10,7 @@ Trello: User Stories
 https://trello.com/b/NEhMod29/rpgupfit
 
 link to Heroku
-https://
+https://rpg-up-fit.herokuapp.com/
 
 link to data models ERD
 
@@ -22,7 +22,8 @@ Kevin James https://github.com/trumpetcoder
 Laura Johnson https://github.com/nemazeelaura
 Sassan Kermani https://github.com/sassankermani
 
-************************RPG-UpFit******************************************
+RPG-UpFit
+*****************************************************************************
 
 Exersize app that will allow users to battle against a dungeon and dragons' character for workout motivation.
 The user will pick their workout ahead of time from a slider of characters and will have special challenges along the way that they will check off at the end of their workout if they accomplish tehm. The user will get a status update of how they stack up against the monster and a prompt to come back again the next day. Having a monster to battle against will motivate people to workout more. Geared towards people that like video games.
@@ -95,4 +96,6 @@ Postgress for database
 Jasmine for testing
 
 
-Wish List for Future Development
+Wish List for Future Development:
+
+Having random monsters pop up at different levels
