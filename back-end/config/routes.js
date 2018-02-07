@@ -63,7 +63,7 @@ router.get('/api/workoutActivitysTabel/:id', workOutActivities.sendOne);
 router.post('api/workoutActivitysTabel', workOutActivities.create);
 
 //update rout/ update workout activitys information
-router.put('api/workoutActivitysTabel', workOutActivities.update);
+router.put('api/workoutActivitysTabel/:id', workOutActivities.update);
 
 //delete rout/ delet workout activitys
 router.delete('api/workoutActivitysTabel', workOutActivities.destroy);
