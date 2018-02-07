@@ -2,7 +2,7 @@
   <div class="container">
    <div class="row">
     <div class="col-xxs-12 col-sm-6 col xx-3 m-b-xxl">
-      <h2>Workouts for {{''}}</h2>       
+      <h2>Workouts for </h2>       
  <!--      <div> -->
         <label>Activity name:
           <input #activityName />
@@ -16,13 +16,13 @@
           <div *ngIf="workoutToEdit !== workout">
             {{workout.id}} - {{workout.name}}
             <button (click)="delete(workout)" class="delete">Delete</button>
-            <button (click)="updateWorkout(workout)" class="update" routerLink="/detail/{{workout.id}}">Edit</button>    
+            <button (click)="onSelect(workout)" class="update" routerLink="/detail/{{workout.id}}">Edit</button>    
           </div>
         </li>
       </ul>
 
       <div>
-        <button (click)="logout()" routerLink="/stats" routerLinkActive="active" class="logout btn-lg move">Logout Account</button> 
+        <button (click)="logout()" routerLink="/monster" routerLinkActive="active" class="logout btn-lg move">Battle Monster</button> 
       </div>
     </div><!--end column one-->
 

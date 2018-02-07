@@ -4,29 +4,30 @@ import { Http } from '@angular/http';
 @Injectable()
 export class DbService {
 
-  url = 'http://localhost:3000';
+  url: string = 'http://localhost:3000';
+  
+  userName = <any> {};
 
-   constructor(
+  constructor(
    	private http: Http
-   ) { };
+  ) { };
 
-   userSignup(newUser){
+  userSignup(newUser){
 
    	// this.http.get('http://localhost:3000/api/userTabel')
    	// 	.subscribe(response => console.log(response));
 
-   	console.log(newUser);
-
    	this.http.post('http://localhost:3000/api/userTabel', newUser)
-   		.subscribe(response => console.log(response));
+      .toPromise()
+   		.then(response => console.log(response.json().name))
+  }
 
-   }
 
   
 
 
 
-  //YOU WERE USEFULL FOR A HOT SEC RIP XML 1998 WAS A GOOD YEAR
+  //YOU WERE USEFULL FOR A HOT SEC. RIP XML, 1998 WAS A GOOD YEAR
 
  //  userSignup(newUser) {
 

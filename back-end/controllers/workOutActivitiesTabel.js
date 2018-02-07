@@ -1,17 +1,17 @@
 //bringing stuff in form mdels
 db = require('../models');
-let WorkOutActivities = db.models.WorkOutActivities;
+let WorkoutActivities = db.models.Workoutactivity;
 
 //get all
 function sendAll(req, res) {
-    WorkOutActivities.findAll().then(function(workOutActivities){
+    WorkoutActivities.findAll({}).then(function(workOutActivities){
         res.json(workOutActivities)
     })
 };
 
 //get one
 function sendOne(req, res) {
-    WorkOutActivities.findById(req.params.id)
+    WorkoutActivities.findById(req.params.id)
         .then(function(workOutActivities){
             if(!workOutActivities) res.send("workOutActivities is not found ");
             else res.json(workOutActivities);
@@ -20,7 +20,7 @@ function sendOne(req, res) {
 
 //make a new workOutActivities
 function create(req, res) {
-    WorkOutActivities.create(req.body).then(function(workOutActivities){
+    WorkoutActivities.create(req.body).then(function(workOutActivities){
         if(!workOutActivities) res.send("workOutActivities has not been saved");
         else res.json(workOutActivities);
     })
@@ -29,7 +29,7 @@ function create(req, res) {
 //updates workOutActivities
 function update(req, res){
     console.log("first");
-    WorkOutActivities.findById(req.params.id)
+    WorkoutActivities.findById(req.params.id)
         .then(function(workOutActivities){
             console.log("third");
             if(!workOutActivities) res.send("workOutActivities has not found");
@@ -43,7 +43,7 @@ function update(req, res){
 
 //delets workOutActivities
 function destroy(req, res) {
-    WorkOutActivities.findById(req.params.id)
+    WorkoutActivities.findById(req.params.id)
         .then(function(workOutActivities){
             if(!workOutActivities) res.send(" workOutActivities is not found ");
             else return workOutActivities.destroy();

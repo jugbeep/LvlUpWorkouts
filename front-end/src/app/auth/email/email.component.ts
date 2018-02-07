@@ -17,14 +17,14 @@ export class EmailComponent implements OnInit {
 
   onSubmit(formData) {
     //this is the begingig of the stuff i need to mess witj
-    if (formData.valid) {
- 	    console.log(formData.value);
-      this.authService.login(
-		    formData.value.email,
-   	    formData.value.password
-  	  );
-    }
+  if (formData.valid) {
+ 	  console.log(formData.value);
+    this.authService.login(
+		formData.value.email,
+   	formData.value.password
+  	)
   }
 }
+
 
 

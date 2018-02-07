@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-	    <a class="navbar-brand" href="#">Please Enter Your Information</a>
+	    <h2 class="navbar-brand">Please Enter Your Information</h2>
 	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    	<span class="navbar-toggler-icon"></span>
 	    </button>
@@ -7,12 +7,13 @@
 	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		    <ul class="navbar-nav mr-auto">
 		        <li class="nav-item active">
-		        	
-		        	<form #formData='ngForm' (ngSubmit)="onSubmit(newUser)">
-						<input type="text" placeholder="Email address" [(ngModel)]="newUser.email" name="name" class="input-txt" required>
-						<input type="password" placeholder="Password" [(ngModel)]="newUser.password" name="password" class='input-txt' required>
-						<button type="submit" [disabled]="!formData.valid" class="auth-btn submit">Submit</button>
-					</form>
+		        	<div class="form-container">
+			        	<form #formData='ngForm' (ngSubmit)="onSubmit(newUser)">
+							<input type="text" placeholder="Email address" [(ngModel)]="newUser.email" name="email" class="input-txt" required>
+							<input type="password" placeholder="Password" [(ngModel)]="newUser.password" name="password" class='input-txt' required>
+							<button type="submit" [disabled]="!formData.valid" class="auth-btn submit">Submit</button>
+						</form>
+					</div>	
 		        </li>
   			</ul>    
 	    </div>

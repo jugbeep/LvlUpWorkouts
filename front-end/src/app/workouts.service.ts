@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient } from "@angular/common/http";
-
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { catchError, map, tap } from 'rxjs/operators';
@@ -15,7 +14,7 @@ const httpOptions = {
 @Injectable()
 export class WorkoutsService {
   
-  private workoutsUrl = 'api/workouts';
+  private workoutsUrl = 'http://localhost:3000/api/workoutActivitysTabel';
 
   constructor(
     private http: HttpClient,
@@ -37,15 +36,9 @@ export class WorkoutsService {
       );
   }
 
-  // save(workout: Workout): Promise<Workout> {
-  //   if (workout.id) {
-  //     return this.put(workout);
-  //   }
-  //   return this.post(workout)
-  // }
-
   updateWorkout(workout: Workout): Observable<any> {
-    return this.http.put(this.workoutsUrl, workout, httpOptions).pipe(
+    const url = `${this.workoutsUrl}/${workout.id}`
+    return this.http.put(url, workout).pipe(
       tap(_ => this.log(`updated workout id=${workout.id}`)),
       catchError(this.handleError<any>('updateWorkout'))
       );
