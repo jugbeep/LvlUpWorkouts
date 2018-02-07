@@ -10,12 +10,12 @@ import { AuthService } from '../../auth.service';
 export class EmailComponent implements OnInit {
 
   constructor(
-  	private authService: AuthService)
-  	{ }
+  	private authService: AuthService
+  ){ }
 
   ngOnInit() {}
 
-onSubmit(formData) {
+  onSubmit(formData) {
     //this is the begingig of the stuff i need to mess witj
   if (formData.valid) {
  	  console.log(formData.value);
@@ -26,6 +26,5 @@ onSubmit(formData) {
   }
 }
 }
-
 
 
