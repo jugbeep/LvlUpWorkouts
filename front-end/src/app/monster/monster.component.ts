@@ -10,7 +10,7 @@ import 'rxjs/add/operator/toPromise';
 export class MonsterComponent implements OnInit {
 
 	results: object []
-  actions: object []
+  
 
   constructor(
   	private http: Http,
