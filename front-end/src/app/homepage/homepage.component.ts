@@ -7,7 +7,7 @@ import { AuthService } from '../auth.service';
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomePageComponent implements OnInit {
 
 
   constructor(
