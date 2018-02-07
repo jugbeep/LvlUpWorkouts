@@ -53,8 +53,26 @@ function destroy(req, res) {
         })
 };
 
+// make uneek workout 
+// function make(req, res){
+
+//     let temWorkout = req.body.workout
+//     let tepUserId = req.body.userId;
+
+//     let temp = {
+//         name : temEmail,
+//         userId : tepUserId
+//     }
+
+//     IndividualWorkouts.create(req.body).then(function(individualWorkouts){
+//         if(!temp) res.send("workout activity is not valid");
+//         else res.json(temp);
+//     })
+// }
+
 module.exports.sendAll = sendAll;
 module.exports.sendOne = sendOne;
 module.exports.create = create;
 module.exports.update = update;
 module.exports.destroy = destroy;
+//module.exports.make = make;

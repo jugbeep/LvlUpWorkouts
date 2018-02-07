@@ -5,7 +5,8 @@ let express = require('express');
 let router = express.Router();
 
 
-//controlers for stuff
+//controlers for stuff 
+
 let userTabelController = require('../controllers/userTabel.js');
 let workOutActivities = require('../controllers/workOutActivitiesTabel.js');
 let individualWorkouts = require('../controllers/individualWorkoutsTavel.js')
@@ -49,6 +50,9 @@ router.put('/api/userTabel', userTabelController.update);
 //delete rout/ delet user
 router.delete('/api/userTabel', userTabelController.destroy);
 
+//log in
+router.post('/api/userTabel/cheack', userTabelController.cheack);
+
 
 /************************************
 *	routs for workout activitys 	*
@@ -68,6 +72,8 @@ router.put('api/workoutActivitysTabel', workOutActivities.update);
 //delete rout/ delet workout activitys
 router.delete('api/workoutActivitysTabel', workOutActivities.destroy);
 
+// make uneek workout 
+//router.post('api/workoutActivitysTabel/make', workOutActivities.make);
 
 /************************************
 *	routs for individual workouts 	*
