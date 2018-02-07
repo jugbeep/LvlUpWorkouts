@@ -24,10 +24,11 @@ input.btn {
     border: 0;
     display: block;
     padding: 1em 3em;
-    background: rgba(255, 178, 94, 1);
+    background: rgba(255, 178, 94, .5);
     color: #003A61;
     margin-bottom: 1em;
     cursor: pointer;
+    margin-top: 1em;
 }
 button {
 	border: none;
@@ -38,5 +39,9 @@ button {
 ul {
 	list-style: none;
 	text-align: left;
-	margin-left: 25px;
+	margin-left: -35px;
 }
+.challenge {
+  color: white;
+}
+
