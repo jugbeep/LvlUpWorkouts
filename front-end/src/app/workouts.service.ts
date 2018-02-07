@@ -38,7 +38,7 @@ export class WorkoutsService {
   }
 
   updateWorkout(workout: Workout): Observable<any> {
-    return this.http.put(this.workoutsUrl, workout, ).pipe(
+    return this.http.put(this.workoutsUrl, workout ).pipe(
       tap(_ => this.log(`updated workout id=${workout.id}`)),
       catchError(this.handleError<any>('updateWorkout'))
       );
