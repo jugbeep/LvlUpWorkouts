@@ -27,5 +27,5 @@ export class EmailComponent implements OnInit {
 }
 }
 
-}
+
 
