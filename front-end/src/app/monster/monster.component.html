@@ -3,10 +3,11 @@
 <input  (click)="findMonster()" class="btn" type="submit" value="Find Monster">
 
 <section *ngIf='results'>
-	<h2>Monsters Found</h2>
+	<h2>Monster Found</h2>
 		<ul>
-			<li *ngFor='let monster of results'>
-				<dt>{{monster.name}}</dt>
-			</li>
+			<li> Name: {{results.name}} </li>
+			<li> Strength: {{results.strength}} </li>
+			<li> Hit Points: {{results.hit_points}} </li>
+			<li> To Beat this enemy, you must sprint for 2 minutes </li>
 		</ul>
 </section>
