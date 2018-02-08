@@ -1,0 +1,33 @@
+.jumbotron {
+  background-color: rgba(235, 239, 249, .08);
+}
+
+h2 {
+  color: rgba(85, 95, 119, 1);
+ }
+
+label {
+  color: rgba(85, 95, 119, 1);
+ }
+
+input, button  {
+  border: 1px solid rgba(85, 95, 119, 1);
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+button, input {
+  border: 1px solid black;
+  border-radius: 5px;
+  backgtound-color: red;
+}
+
+button:hover {
+  background-color: rgba(248, 192, 132, .5);
+}
+
+img {
+  padding-top: 30px;
+  width: 300px;
+  height: 300px;
+}
