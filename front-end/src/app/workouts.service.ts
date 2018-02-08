@@ -3,6 +3,7 @@ import { HttpHeaders, HttpClient } from "@angular/common/http";
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { catchError, map, tap } from 'rxjs/operators';
+import { isDevMode } from '@angular/core';
 
 import { Workout } from './workouts/workout';
 
@@ -14,12 +15,19 @@ const httpOptions = {
 
 @Injectable()
 export class WorkoutsService {
+
+ // workoutsUrl: string;
   
   private workoutsUrl = 'http://localhost:3000/api/workoutActivitysTabel';
 
   constructor(
     private http: HttpClient,
-  ) { }
+  ) { if(isDevMode()) {
+      this.workoutsUrl = 'http://localhost:3000';
+      } else {
+      this.workoutsUrl = '';
+    } 
+  }
 
   getWorkouts(): Observable<Workout[]> {
     return this.http.get<Workout[]>(this.workoutsUrl)

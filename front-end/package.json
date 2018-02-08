@@ -4,7 +4,9 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "deploy": "cd front-end && ng build --aot -prod -op ../back-end/dist && cd ..",
+    "start": "node back-end/server.js",
+    "postinstall": "cd back-end && npm install",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
