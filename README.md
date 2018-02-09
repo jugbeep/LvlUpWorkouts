@@ -4,7 +4,7 @@ Github Link
 https://github.com/jugbeep/LvlUpWorkouts
 
 Link to Wireframe
-https://github.com/jugbeep/LvlUpWorkouts/tree/master/front-end/wireframe.png
+https://github.com/jugbeep/LvlUpWorkouts/blob/master/front-end/src/assets/images/wireframe_png.png
 
 Trello: User Stories
 https://trello.com/b/NEhMod29/rpgupfit
@@ -13,6 +13,7 @@ Link to Heroku
 https://rpg-up-fit.herokuapp.com/
 
 Link to data models ERD
+https://github.com/jugbeep/LvlUpWorkouts/blob/master/front-end/src/assets/images/erd.jpg
 
 CONTRIBUTORS: 
 Patrick Botkins https://github.com/jugbeep
@@ -20,13 +21,13 @@ Kevin James https://github.com/trumpetcoder
 Laura Johnson https://github.com/nemazeelaura
 Sassan Kermani https://github.com/sassankermani
 
-RPG-UpFit
+RPG-UpFit Elevator Pitch
 *****************************************************************************
 
 Exercise app that will allow users to battle against a dungeon and dragons' character for workout motivation. The user will pick their work out ahead of time from a slider of characters and will have special challenges along the way that they will check off at the end of their workout if they accomplish them. The user will get a status update of how they stack up against the monster and a prompt to come back again the next day. Having a monster to battle against will motivate people to work out more. Geared towards people that like video games.
 
 We will be using the dungeons and dragons api for our monsters to battle against for your fitness
-https://dnd5eapi.co/api/monsters/10
+http://www.dnd5eapi.co
 
 USER RESEARCH
 ****************************************************************************
@@ -95,4 +96,4 @@ Mocha and Chai for testing
 WISH LIST FOR THE FUTURE:
 
 Having random monsters pop up at different levels. Give user the option of picking music.
-Give the user an option to schedule their next workout
+Give user an option to schedule their next workout.
