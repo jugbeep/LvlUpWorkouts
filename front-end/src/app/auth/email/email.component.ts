@@ -9,6 +9,9 @@ import { AuthService } from '../../auth.service';
 
 export class EmailComponent implements OnInit {
 
+  email: string;
+  password: string;
+  
   constructor(
   	private authService: AuthService
   ){ }

@@ -1,23 +1,31 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { isDevMode } from '@angular/core';
 
 @Injectable()
 export class DbService {
 
-  url: string = 'http://localhost:3000';
+  // url: string = 'http://localhost:3000';
+
+  url: string;
   
   userName = <any> {};
 
   constructor(
-   	private http: Http
-  ) { };
+   	private http: Http,
+  		) { if(isDevMode()) {
+  		this.url = 'http://localhost:3000';
+  		} else {
+  		this.url = '';
+  	} 
+  };
 
   userSignup(newUser){
 
    	// this.http.get('http://localhost:3000/api/userTabel')
    	// 	.subscribe(response => console.log(response));
 
-   	this.http.post('http://localhost:3000/api/userTabel', newUser)
+   	this.http.post('url', newUser)
       .toPromise()
    		.then(response => console.log(response.json().name))
   }
