@@ -26,7 +26,6 @@ export class SignupComponent implements OnInit {
   		this.authService.emailSignup(
   			formData.value.email,
   			formData.value.password
-
   		)
   	}
     this.dbService.userSignup(formData)

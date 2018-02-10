@@ -19,6 +19,9 @@ let userCreate = function(){
 		)
 }
 
+//this is for removing timestamps
+//http://docs.sequelizejs.com/manual/tutorial/models-definition.html#configuration
+
 
 /********************
 *	workoutactivity	*
