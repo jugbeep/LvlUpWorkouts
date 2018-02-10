@@ -10,8 +10,7 @@ export class AuthService {
 
   constructor(
   	private afAuth: AngularFireAuth,
-  	private router: Router
-    ) { }
+  	private router: Router) {}
 
 
   	login(email: string, password: string) {

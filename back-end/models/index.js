@@ -4,7 +4,7 @@ var Sequelize = require('sequelize');
 /********************************
 /	Put your name in this let	*
 ********************************/
-let name = 'patrickbotkins';
+let name = 'kevinjames';
 
 var sequelize = new Sequelize('postgres://' + name + '@localhost:5432/dnddatabase');
 
