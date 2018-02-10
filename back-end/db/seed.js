@@ -9,7 +9,9 @@ var DB = require("../models").models;
 let userCreate = function(){
 	return DB.User.create(
 		{
-			name : 'Sassan'
+			name : 'Sassan',
+			createdAt: false,
+			updatedAt: false
 		}
 	)
 		.then(
@@ -31,7 +33,8 @@ let workoutactivityCreate = function(userId){
 	return DB.Workoutactivity.create(
 		{
 			name: "do nothing",
-			userId : userId
+			userId : userId,
+			timestamps: false
 		}
 		//prity sure this is were we can seed more workoutactivitys
 	)
@@ -51,7 +54,8 @@ let workoutactivityCreate = function(userId){
 	 	{
 	 		name : "test workout",
  			workoutactivityId : workoutactivityId,
- 			userId : userId
+ 			userId : userId,
+ 			timestamps: false
 	 	}
  	);
  }
