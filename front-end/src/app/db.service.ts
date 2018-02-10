@@ -25,7 +25,7 @@ export class DbService {
    	// this.http.get('http://localhost:3000/api/userTabel')
    	// 	.subscribe(response => console.log(response));
 
-   	this.http.post('url', newUser)
+   	this.http.post('http://localhost:3000/api/userTabel', newUser)
       .toPromise()
    		.then(response => console.log(response.json().name))
   }
