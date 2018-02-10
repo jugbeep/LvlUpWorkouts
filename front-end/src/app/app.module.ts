@@ -42,7 +42,7 @@ export const firebaseConfig = {
   authDomain: "login-angular-5.firebaseapp.com",
   databaseURL: "https://login-angular-5.firebaseio.com",
   projectId: "login-angular-5",
-  storageBucket: "",
+  storageBucket: "login-angular-5.appspot.com",
   messagingSenderId: "640818277665"
 }
 

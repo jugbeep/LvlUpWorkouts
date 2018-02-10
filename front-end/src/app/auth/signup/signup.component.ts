@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class SignupComponent implements OnInit {
   
-  newUser = <any>{};
+  formData = <any>{};
 
   constructor(
   	public authService: AuthService,
@@ -19,16 +19,16 @@ export class SignupComponent implements OnInit {
 
   ngOnInit() { }
 
-  onSubmit(newUser) {
+  onSubmit(formData) {
 
-  	if (newUser.valid) {
-  		console.log(newUser.value);
+  	if (formData.valid) {
+  		console.log(formData.value);
   		this.authService.emailSignup(
-  			newUser.value.email,
-  			newUser.value.password
+  			formData.value.email,
+  			formData.value.password
   		)
   	}
-    this.dbService.userSignup(newUser)
+    this.dbService.userSignup(formData)
   }
 }
 
