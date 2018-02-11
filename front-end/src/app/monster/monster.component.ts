@@ -21,7 +21,7 @@ results: object []
 
  findMonster() {
         // console.log('I want to search http://dnd5eapi.co/api/');
-    this.http.get('http://dnd5eapi.co/api/monsters/10') //Works
+    this.http.get('//dnd5eapi.co/api/monsters/10') //Works
         .toPromise()
         // .then(response => console.log(response.json()));
         .then(response => this.results = response.json());
