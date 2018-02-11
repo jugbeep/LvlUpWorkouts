@@ -29,6 +29,9 @@ app.use(bodyParser.json());																//this was braking i got rid of it ha
 //for heroku
 if(!process.env.DYNO) {
     app.use(function(req, res, next) {
+      if (req.headers['x-forwarded-proto'] === 'https') {
+        res.redirect('http://' + req.hostname + req.url);
+      }
 
       res.header("Access-Control-Allow-Origin", '*');
   	  res.header("Access-Control-Allow-Credentials", true);
