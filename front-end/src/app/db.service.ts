@@ -12,11 +12,11 @@ export class DbService {
   userName = <any> {};
 
   constructor(
-   	private http: Http,
-  		) { if(isDevMode()) {
-  		this.url = 'http://localhost:3000';
-  		} else {
-  		this.url = '';
+   	// private http: Http,
+  		// ) { if(isDevMode()) {
+  		// this.url = 'http://localhost:3000';
+  		// } else {
+  		// this.url = '';
   	} 
   };
 
@@ -25,16 +25,10 @@ export class DbService {
    	// this.http.get('http://localhost:3000/api/userTabel')
    	// 	.subscribe(response => console.log(response));
 
-<<<<<<< HEAD
-
-   	this.http.post('http://localhost:3000/api/userTabel', newUser)
-      .subscribe()
-   		.then(response => console.log(response.json().name))
-=======
    	this.http.post('http://localhost:3000/api/userTabel', formData)
       .subscribe()
    	  // .then(response => console.log(response.json().name))
->>>>>>> 5106673d87cba3be64788963df172fe4a1092d50
+
   }
 }
 
