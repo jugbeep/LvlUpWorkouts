@@ -7,7 +7,7 @@ export class DbService {
 
   // url: string = 'http://localhost:3000';
 
-  url: string;
+  //url: string;
   
   userName = <any> {};
 
