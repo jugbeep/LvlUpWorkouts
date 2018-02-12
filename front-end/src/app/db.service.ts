@@ -6,8 +6,6 @@ import { isDevMode } from '@angular/core';
 export class DbService {
 
   url: string = 'http://localhost:3000/api/userTabel';
-
-  url: string;
   
   userName = <any> {};
 
