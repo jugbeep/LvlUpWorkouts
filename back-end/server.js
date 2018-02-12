@@ -6,7 +6,6 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
-const cors = require('cors');
 //let Sequelize = require('sequelize');														//this is now in models/index.js 
 
 /********************************
@@ -21,7 +20,6 @@ const cors = require('cors');
 const port = process.env.PORT || 3000;
 
 //app.use set up
-app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));		//dont thnk we need this
 app.use(bodyParser.json());																//this was braking i got rid of it has not broke net. 
 
