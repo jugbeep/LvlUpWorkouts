@@ -17,8 +17,8 @@ export class DbService {
   		// this.url = 'http://localhost:3000';
   		// } else {
   		// this.url = '';
-  	} 
-  };
+  } )
+ 
 
   userSignup(formData){
 
