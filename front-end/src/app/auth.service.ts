@@ -10,8 +10,7 @@ export class AuthService {
 
   constructor(
   	private afAuth: AngularFireAuth,
-  	private router: Router
-    ) { }
+  	private router: Router) {}
 
 
   	login(email: string, password: string) {
@@ -20,9 +19,9 @@ export class AuthService {
   		console.log('Nice, log in works!');
   		this.router.navigateByUrl('/workouts');
   		})
-  	  .catch(err => {
-  		console.log('something went wrong: ', err.message);
-      alert('Try again');
+  	  .catch(error => {
+  		console.log('something went wrong: ', error);
+      alert('Try again' + error);
   		});
     }
 
@@ -34,7 +33,7 @@ export class AuthService {
       })
       .catch(error => {
       console.log('Something went wrong: ', error);
-      alert('Try again');
+      alert('Try again' + error);
       });
     }
 
@@ -47,7 +46,7 @@ export class AuthService {
    	  })
       .catch(error => {
         console.log('Something went wrong: ', error);
-        alert('Try again');
+        alert('Try again' + error);
       });
     }
 

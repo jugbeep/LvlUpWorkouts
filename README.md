@@ -10,7 +10,7 @@ Trello: User Stories
 https://trello.com/b/NEhMod29/rpgupfit
 
 Link to Heroku
-https://rpg-up-fit.herokuapp.com/
+http://rpg-up-fit.herokuapp.com/
 
 Link to data models ERD
 https://github.com/jugbeep/LvlUpWorkouts/blob/master/front-end/src/assets/images/erd.jpg
