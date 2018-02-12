@@ -13,8 +13,8 @@ export class DbService {
    	private http: Http,
   		) { if(isDevMode()) {
   		this.url = 'http://localhost:3000';
-  		} else {
-  		this.url = '';
+  		// } else {
+  		// this.url = '';
   	} 
   })
 
