@@ -27,7 +27,7 @@ export class DbService {
 
    	this.http.post('http://localhost:3000/api/userTabel', formData)
       .subscribe()
-   	  // .then(response => console.log(response.json().name))
+   	  .then(response => console.log(response.json().name))
 
   }
 }
