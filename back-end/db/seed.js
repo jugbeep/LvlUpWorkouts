@@ -35,15 +35,15 @@ let workoutactivityCreate = function(userId){
 			name: "do nothing",
 			//userId : userId,
 			timestamps: false
-		}
+		},
 		{
 			name: 'Push Ups',
 			timestamps: false
-		}
+		},
 		{
 			name: 'Sit Ups',
 			timestamps: false
-		}
+		},
 		{
 			name: 'Burpies'
 			timestamps: false
