@@ -77,7 +77,7 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
     // InMemoryWebApiModule.forRoot(WorkoutDataService, { dataEncapsulation: false }),
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
+    //ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
 
   providers: [ AuthService, WorkoutsService, DbService ],
