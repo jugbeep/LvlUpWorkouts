@@ -11,21 +11,21 @@ export class DbService {
 
   constructor(
    	private http: Http,
-  		) { if(isDevMode()) {
-  		this.url = 'http://localhost:3000';
-  		// } else {
-  		// this.url = '';
-  	} 
+  	// 	) { if(isDevMode()) {
+  	// 	this.url = 'http://localhost:3000';
+  	// 	} else {
+  	// 	this.url = '';
+  	// } 
   })
 
-  userSignup(newUser){
+  userSignup(formData){
 
    	// this.http.get('http://localhost:3000/api/userTabel')
    	// 	.subscribe(response => console.log(response));
 
-   	this.http.post('url', newUser)
+   	this.http.post('http://localhost:3000/api/userTabel', formData)
       .subscribe()
-   		.then(response => console.log(response.json().name))
+   		//.then(response => console.log(response.json().name))
   }
 
 
