@@ -1,11 +1,11 @@
- import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http'; 
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-//import { ServiceWorkerModule } from '@angular/service-worker';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 // import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 
@@ -77,7 +77,7 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule
     // InMemoryWebApiModule.forRoot(WorkoutDataService, { dataEncapsulation: false }),
-    //ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
 
   providers: [ AuthService, WorkoutsService, DbService ],
