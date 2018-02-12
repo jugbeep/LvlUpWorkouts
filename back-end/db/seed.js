@@ -33,7 +33,19 @@ let workoutactivityCreate = function(userId){
 	return DB.Workoutactivity.create(
 		{
 			name: "do nothing",
-			userId : userId,
+			//userId : userId,
+			timestamps: false
+		}
+		{
+			name: 'Push Ups',
+			timestamps: false
+		}
+		{
+			name: 'Sit Ups',
+			timestamps: false
+		}
+		{
+			name: 'Burpies'
 			timestamps: false
 		}
 		//prity sure this is were we can seed more workoutactivitys
