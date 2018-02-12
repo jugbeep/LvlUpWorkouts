@@ -27,8 +27,8 @@ const routes: Routes = [
   { path: 'workouts', component: WorkoutsComponent },
   { path: 'detail/:id', component: WorkoutDetailComponent }, 
   { path: 'about', component: AboutComponent},
-  { path: 'stats', component: WorkoutStatisticsComponent},
-  { path: '*', component: PageNotFoundComponent }
+  { path: 'stats', component: WorkoutStatisticsComponent}
+  // { path: '*', component: PageNotFoundComponent }
 
 ];
 
