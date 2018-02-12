@@ -28,7 +28,7 @@ export class SignupComponent implements OnInit {
   			formData.value.password
   		)
   	}
-    this.dbService.userSignup(formData)
+   // this.dbService.userSignup(formData)
   }
 }
 
