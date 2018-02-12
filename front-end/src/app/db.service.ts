@@ -11,12 +11,14 @@ export class DbService {
 
   constructor(
    	private http: Http,
-  		) { if(isDevMode()) {
+  		) 
+    { if(isDevMode()) {
   		this.url = 'http://localhost:3000';
   		} else {
   		this.url = '';
   	} 
-  })
+  }
+
 
   userSignup(formData){
 
