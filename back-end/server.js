@@ -29,11 +29,8 @@ app.use(bodyParser.json());																//this was braking i got rid of it ha
 //for heroku
 if(!process.env.DYNO) {
     app.use(function(req, res, next) {
-      if (req.headers['x-forwarded-proto'] === 'https') {
-        res.redirect('http://' + req.hostname + req.url);
-      }
 
-      res.header("Access-Control-Allow-Origin", '*');
+      res.header("Access-Control-Allow-Origin", 'http://www.dnd5eapi.co/api/monsters/10');
   	  res.header("Access-Control-Allow-Credentials", true);
       res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
       res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE");
