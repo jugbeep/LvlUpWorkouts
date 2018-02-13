@@ -54,7 +54,7 @@ export class WorkoutsService {
 
   addWorkout(workout: Workout): Observable<Workout> {
     return this.http.post<Workout>(this.workoutsUrl, workout, httpOptions).pipe(
-      tap((workout: Workout) => this.log(`added workout w/ id=${workout.id}`)),
+      tap((workout: Workout) => this.log(`added workout`)),
       catchError(this.handleError<Workout>('addWorkout'))
       );
   }
