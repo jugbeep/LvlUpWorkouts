@@ -74,7 +74,7 @@ let workoutactivityCreate = function(userId){
 
 
 
-
+workoutactivityCreate()
 // userCreate() 
 .then(function() {
      process.exit();
