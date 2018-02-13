@@ -45,7 +45,7 @@ let workoutactivityCreate = function(userId){
 			timestamps: false
 		},
 		{
-			name: 'Burpies'
+			name: 'Burpies',
 			timestamps: false
 		}
 		//prity sure this is were we can seed more workoutactivitys
