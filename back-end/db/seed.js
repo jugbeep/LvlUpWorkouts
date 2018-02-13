@@ -6,20 +6,20 @@ var DB = require("../models").models;
 	sets up the users	*
 ************************/
 
-let userCreate = function(){
-	return DB.User.create(
-		{
-			name : 'Sassan',
-			createdAt: false,
-			updatedAt: false
-		}
-	)
-		.then(
-			function(user){
-				workoutactivityCreate(user.id);
-			}
-		)
-}
+// let userCreate = function(){
+// 	return DB.User.create(
+// 		{
+// 			name : 'Sassan',
+// 			createdAt: false,
+// 			updatedAt: false
+// 		}
+// 	)
+// 		.then(
+// 			function(user){
+// 				workoutactivityCreate(user.id);
+// 			}
+// 		)
+// }
 
 //this is for removing timestamps
 //http://docs.sequelizejs.com/manual/tutorial/models-definition.html#configuration
@@ -33,7 +33,7 @@ let workoutactivityCreate = function(userId){
 	return DB.Workoutactivity.create(
 		{
 			name: "do nothing",
-			//userId : userId,
+			//userId : userId, at some point maybe we can tie a workout to a user
 			timestamps: false
 		},
 		{
