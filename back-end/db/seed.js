@@ -50,11 +50,11 @@ let workoutactivityCreate = function(userId){
 		}
 		//prity sure this is were we can seed more workoutactivitys
 	)
-		.then(
-			function(workoutactivity){
-				workoutCreate(workoutactivity.Id,user.Id);
-			}
-		)
+		// .then(
+		// 	function(workoutactivity){
+		// 		workoutCreate(workoutactivity.Id,user.Id);
+		// 	}
+		// )
 }
 
 
