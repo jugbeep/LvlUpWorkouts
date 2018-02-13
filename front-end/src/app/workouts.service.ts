@@ -23,14 +23,14 @@ export class WorkoutsService {
   constructor(
     private http: HttpClient,
   ) { if(isDevMode()) {
-      this.workoutsUrl = 'http://localhost:3000';
+      this.workoutsUrl = 'http://localhost:3000/api/workoutActivitysTabel';
       } else {
       this.workoutsUrl = '';
     } 
   }
 
   getWorkouts(): Observable<Workout[]> {
-    return this.http.get<Workout[]>(this.workoutsUrl)
+    return this.http.get<Workout[]>(this.workoutsUrl )
       .pipe(
         tap(workouts => this.log(`got some workouts`)),
         catchError(this.handleError('getWorkouts', []))
