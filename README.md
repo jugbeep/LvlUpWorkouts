@@ -17,7 +17,7 @@ Trello: User Stories
 https://trello.com/b/NEhMod29/rpgupfit
 
 Link to Heroku
-https://rpg-up-fit.herokuapp.com/
+http://rpg-up-fit.herokuapp.com/
 
 Link to data models ERD
 <br>
@@ -28,6 +28,7 @@ Patrick Botkins https://github.com/jugbeep
 Kevin James https://github.com/trumpetcoder
 Laura Johnson https://github.com/nemazeelaura
 Sassan Kermani https://github.com/sassankermani
+
 
 ELEVATOR PITCH
 ****************************************************************************

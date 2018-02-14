@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from './../auth.service';
 
 import { Workout } from './workout';
 import { WorkoutsService } from '../workouts.service';
@@ -22,7 +23,9 @@ export class WorkoutsComponent implements OnInit {
 
 
   constructor(
-    private workoutsService: WorkoutsService) { }
+    private workoutsService: WorkoutsService,
+    private authService: AuthService
+    ) { }
 
   ngOnInit(): void {
     this.getWorkouts();
@@ -73,6 +76,9 @@ export class WorkoutsComponent implements OnInit {
     this.addingWorkout = false;
   }
 
+  signOut() {
+    this.authService.logout();
+  }
   // gotoDetail(): void {
   //   this.router.navigate(['/detail', this.selectedWorkout.id])
   // }

@@ -4,9 +4,9 @@ var Sequelize = require('sequelize');
 /********************************
 /	Put your name in this let	*
 ********************************/
-let name = 'patrickbotkins';
+let name = 'kevinjames';
 
-var sequelize = new Sequelize('postgres://' + name + '@localhost:5432/dnddatabase');
+var sequelize = new Sequelize(process.env.DATABASE_URL || 'postgres://' + name + '@localhost:5432/dnddatabase');
 
 //Export models and Sequelize for seed and dbSetup
 module.exports.sequelize = sequelize;
