@@ -38,10 +38,11 @@ if(!process.env.DYNO) {
     });
   }
 
-//for huroku / anguler
+//for heroku / anguler
 app.use(express.static(__dirname + "/"  + '/dist'));
 
 app.get('/*', function(req, res) {
+  console.log('sending index html');
   res.sendFile(path.join(__dirname + '/dist/index.html'));
 });
 

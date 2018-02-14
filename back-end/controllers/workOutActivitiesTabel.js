@@ -5,6 +5,7 @@ let WorkoutActivities = db.models.Workoutactivity;
 //get all
 function sendAll(req, res) {
     WorkoutActivities.findAll({}).then(function(workOutActivities){
+        console.log('hitting workOutActivities sendAll')
         res.json(workOutActivities)
     })
 };
