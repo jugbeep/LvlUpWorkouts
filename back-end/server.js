@@ -54,5 +54,6 @@ app.use(router);
 
 //listener
 app.listen(port, function(){
-	console.log(`Listening on port ${port}`);
+	//console.log(`Listening on port ${port}`);
+	console.log("wer are up boys");
 });

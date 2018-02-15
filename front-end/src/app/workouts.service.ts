@@ -17,13 +17,13 @@ export class WorkoutsService {
 
   // workoutsUrl: string;
   
-  private workoutsUrl = 'http://localhost:3000/api/workoutActivitysTabel';
+  private workoutsUrl = '/api/workoutActivitysTabel';
 
   constructor(
     private http: HttpClient,
   
   ) { if(isDevMode()) {
-      this.workoutsUrl = 'http://localhost:3000/api/workoutActivitysTabel';
+      this.workoutsUrl = '/api/workoutActivitysTabel';
       } else {
       this.workoutsUrl = '';
     } 
