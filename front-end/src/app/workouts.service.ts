@@ -45,15 +45,18 @@ export class WorkoutsService {
       );
   }
 
-  updateWorkout(workout: Workout): Observable<any> {
-    return this.http.put(this.workoutsUrl, workout ).pipe(
+  updateWorkout(workout: Workout, id: number): Observable<any> {
+    const url = `${this.workoutsUrl}/${id}`;
+    console.log(id)
+    console.log(url);
+    return this.http.put(url, workout).pipe(
       tap(_ => this.log(`updated workout id=${workout.id}`)),
       catchError(this.handleError<any>('updateWorkout'))
       );
   }
 
   addWorkout(workout: Workout): Observable<Workout> {
-    return this.http.post<Workout>(this.workoutsUrl, workout, httpOptions).pipe(
+    return this.http.post<Workout>(this.workoutsUrl, workout).pipe(
       tap((workout: Workout) => this.log(`added workout`)),
       catchError(this.handleError<Workout>('addWorkout'))
       );

@@ -21,6 +21,7 @@ function sendOne(req, res) {
 
 //make a new workOutActivities
 function create(req, res) {
+    console.log("hit create route")
     WorkoutActivities.create(req.body).then(function(workOutActivities){
         if(!workOutActivities) res.send("workOutActivities has not been saved");
         else res.json(workOutActivities);

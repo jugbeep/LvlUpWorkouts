@@ -63,14 +63,14 @@ router.get('/api/workoutActivitysTabel', workOutActivities.sendAll);
 //get by id
 router.get('/api/workoutActivitysTabel/:id', workOutActivities.sendOne);
 
-//post rout/ creat new workout activitys
-router.post('api/workoutActivitysTabel', workOutActivities.create);
+//post rout/ creat new workout activity
+router.post('/api/workoutActivitysTabel', workOutActivities.create);
 
 //update rout/ update workout activitys information
-router.put('api/workoutActivitysTabel/:id', workOutActivities.update);
+router.put('/api/workoutActivitysTabel/:id', workOutActivities.update);
 
 //delete rout/ delet workout activitys
-router.delete('api/workoutActivitysTabel', workOutActivities.destroy);
+router.delete('/api/workoutActivitysTabel/:id', workOutActivities.destroy);
 
 // make uneek workout 
 //router.post('api/workoutActivitysTabel/make', workOutActivities.make);

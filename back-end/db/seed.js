@@ -34,27 +34,18 @@ let workoutactivityCreate = function(userId){
 		{
 			name: "do nothing",
 			//userId : userId, at some point maybe we can tie a workout to a user
-			timestamps: false
 		},
 		{
 			name: 'Push Ups',
-			timestamps: false
 		},
 		{
 			name: 'Sit Ups',
-			timestamps: false
 		},
 		{
-			name: 'Burpies',
-			timestamps: false
+			name: 'Burpees',
 		}
 		//prity sure this is were we can seed more workoutactivitys
 	)
-		// .then(
-		// 	function(workoutactivity){
-		// 		workoutCreate(workoutactivity.Id,user.Id);
-		// 	}
-		// )
 }
 
 
