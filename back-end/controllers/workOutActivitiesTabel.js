@@ -9,6 +9,7 @@ let WorkoutActivities = db.models.Workoutactivity;
 //get all
 function sendAll(req, res) {
     WorkoutActivities.findAll({}).then(function(workOutActivities){
+        console.log('hitting workOutActivities sendAll')
         res.json(workOutActivities)
     })
 };
@@ -36,6 +37,7 @@ function sendOne(req, res) {
 
 //make a new workOutActivities
 function create(req, res) {
+    console.log("hit create route")
     WorkoutActivities.create(req.body).then(function(workOutActivities){
         if(!workOutActivities) res.send("workOutActivities has not been saved");
         else res.json(workOutActivities);

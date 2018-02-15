@@ -32,7 +32,8 @@ export class WorkoutDetailComponent implements OnInit{
   }
  
   save(): void {
-    this.workoutService.updateWorkout(this.workout)
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.workoutService.updateWorkout(this.workout, id)
       .subscribe(() => this.goBack());
   }
 

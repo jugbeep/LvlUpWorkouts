@@ -17,20 +17,20 @@ let individualWorkouts = require('../controllers/individualWorkoutsTavel.js')
 ************/
 
 //test
-router.get('/', function(req, res) {
-	console.log('hit the get route')
-	console.log(req.params.email)
-	console.log(req.body.email)
-	res.json( "its up " + req.body);
-});
+// router.get('/', function(req, res) {
+// 	console.log('hit the get route')
+// 	console.log(req.params.email)
+// 	console.log(req.body.email)
+// 	res.json( "its up " + req.body);
+// });
 
-router.post('/', function(req, res) {
-	console.log("you hit the post")
-	console.log(req.params.email)
-	console.log(req.body.email)
-	console.log(req.body)
-	res.send(req.body.email);
-});
+// router.post('/', function(req, res) {
+// 	console.log("you hit the post")
+// 	console.log(req.params.email)
+// 	console.log(req.body.email)
+// 	console.log(req.body)
+// 	res.send(req.body.email);
+// });
 
 /****************************
 *	routs for user tabel 	*
@@ -63,14 +63,14 @@ router.get('/api/workoutActivitysTabel', workOutActivities.sendAll);
 //get by id
 router.get('/api/workoutActivitysTabel/:id', workOutActivities.sendOne);
 
-//post rout/ creat new workout activitys
-router.post('api/workoutActivitysTabel', workOutActivities.create);
+//post rout/ creat new workout activity
+router.post('/api/workoutActivitysTabel', workOutActivities.create);
 
 //update rout/ update workout activitys information
-router.put('api/workoutActivitysTabel/:id', workOutActivities.update);
+router.put('/api/workoutActivitysTabel/:id', workOutActivities.update);
 
 //delete rout/ delet workout activitys
-router.delete('api/workoutActivitysTabel', workOutActivities.destroy);
+router.delete('/api/workoutActivitysTabel/:id', workOutActivities.destroy);
 
 // make uneek workout 
 //router.post('api/workoutActivitysTabel/make', workOutActivities.make);
