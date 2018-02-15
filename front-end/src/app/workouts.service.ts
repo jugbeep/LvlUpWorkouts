@@ -17,19 +17,20 @@ export class WorkoutsService {
 
   // workoutsUrl: string;
   
-  private workoutsUrl = '/api/workoutActivitysTabel';
+  private workoutsUrl; //= 'http://localhost:3000/api/workoutActivitysTabel';
 
   constructor(
     private http: HttpClient,
   
   ) { if(isDevMode()) {
-      this.workoutsUrl = '/api/workoutActivitysTabel';
+      this.workoutsUrl = 'http://localhost:3000/api/workoutActivitysTabel';
       } else {
-      this.workoutsUrl = '';
+      this.workoutsUrl = '/api/workoutActivitysTabel';
     } 
   }
 
   getWorkouts(): Observable<Workout[]> {
+    console.log(this.workoutsUrl)
     return this.http.get<Workout[]>(this.workoutsUrl ) 
       .pipe(
         tap(workouts => this.log(`got some workouts`)),

@@ -5,7 +5,7 @@ import { isDevMode } from '@angular/core';
 @Injectable()
 export class DbService {
 
-  url: string = 'http://localhost:3000/api/userTabel';
+  url: string; // 'http://localhost:3000/api/userTabel';
   
   userName = <any> {};
 
@@ -13,9 +13,9 @@ export class DbService {
    	private http: Http,
   		) 
     { if(isDevMode()) {
-  		this.url = 'http://localhost:3000';
+  		this.url = 'http://localhost:3000/api/userTabel';
   		} else {
-  		this.url = '';
+  		this.url = '/api/userTabel';
   	} 
   }
 
