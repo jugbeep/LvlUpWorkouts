@@ -1,4 +1,4 @@
-u//set up
+//set up
 var Sequelize = require('sequelize');
 
 /********************************
