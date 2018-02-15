@@ -22,19 +22,10 @@ export class DbService {
 
   userSignup(formData){
 
-   	// this.http.get('http://localhost:3000/api/userTabel')
-   	// 	.subscribe(response => console.log(response));
-
-<<<<<<< HEAD
-
-   	this.http.post('http://localhost:3000/api/userTabel', newUser)
-      .subscribe()
-   		.then(response => console.log(response.json().name))
-=======
    	this.http.post('http://localhost:3000/api/userTabel', formData)
       .subscribe()
    	  // .then(response => console.log(response.json().name))
->>>>>>> 5106673d87cba3be64788963df172fe4a1092d50
+
   }
 }
 

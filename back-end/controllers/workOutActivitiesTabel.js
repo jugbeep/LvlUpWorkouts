@@ -2,12 +2,22 @@
 db = require('../models');
 let WorkoutActivities = db.models.Workoutactivity;
 
+/*==========================================
+=            sendAll being used            =
+==========================================*/
+
 //get all
 function sendAll(req, res) {
     WorkoutActivities.findAll({}).then(function(workOutActivities){
         res.json(workOutActivities)
     })
 };
+
+/*=====  End of sendAll being used  ======*/
+
+/*=============================================
+=            sendOne being used            =
+=============================================*/
 
 //get one
 function sendOne(req, res) {
@@ -18,6 +28,12 @@ function sendOne(req, res) {
         });   
 };
 
+/*=====  End of sendOne being used  ======*/
+
+/*==========================================
+=            create being used            =
+==========================================*/
+
 //make a new workOutActivities
 function create(req, res) {
     WorkoutActivities.create(req.body).then(function(workOutActivities){
@@ -25,6 +41,12 @@ function create(req, res) {
         else res.json(workOutActivities);
     })
 };
+
+/*=====  End of create being used  ======*/
+
+/*=========================================
+=            update being used            =
+=========================================*/
 
 //updates workOutActivities
 function update(req, res){
@@ -41,6 +63,12 @@ function update(req, res){
         });
 }
 
+/*=====  End of update being used  ======*/
+
+/*========================================
+=            delet being used            =
+========================================*/
+
 //delets workOutActivities
 function destroy(req, res) {
     WorkoutActivities.findById(req.params.id)
@@ -52,6 +80,9 @@ function destroy(req, res) {
             res.send("workOutActivities deleted.")
         })
 };
+
+/*=====  End of delet being used  ======*/
+
 
 // make uneek workout 
 // function make(req, res){
