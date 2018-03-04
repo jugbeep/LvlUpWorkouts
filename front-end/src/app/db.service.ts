@@ -20,6 +20,17 @@ export class DbService {
   }
 
 
+<<<<<<< HEAD
+
+
+   	// this.http.post('http://localhost:3000/api/userTabel', newUser)
+    //   .subscribe()
+   	// 	.then(response => console.log(response.json().name))
+
+   	this.http.post('http://localhost:3000/api/userTabel', formData)
+      .subscribe()
+   	  // .then(response => console.log(response.json().name))
+=======
   userSignup(formData){
 
    	this.http.post('http://localhost:3000/api/userTabel', formData)
@@ -30,6 +41,7 @@ export class DbService {
    	// this.http.get('http://localhost:3000/api/userTabel')
    	// 	.subscribe(response => console.log(response));
 
+>>>>>>> master
   }
 
 

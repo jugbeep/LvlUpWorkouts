@@ -1,10 +1,17 @@
-Rpg-UpFit app
+Rpg-Fit app
 
 Github Link
 https://github.com/jugbeep/LvlUpWorkouts
 
 Link to Wireframe
-https://github.com/jugbeep/LvlUpWorkouts/blob/master/front-end/src/assets/images/wireframe_png.png
+<br>
+img width="50%" src="https://github.com/jugbeep/LvlUpWorkouts/blob/master/front-end/src/assets/images/wireframe_png.png" />
+<br>
+
+Link to original sketch
+<br>
+img width="50%" src="https://github.com/jugbeep/LvlUpWorkouts/blob/master/front-end/src/assets/images/IMG_8638.JPG" />
+<br>
 
 Trello: User Stories
 https://trello.com/b/NEhMod29/rpgupfit
@@ -13,16 +20,18 @@ Link to Heroku
 http://rpg-up-fit.herokuapp.com/
 
 Link to data models ERD
-https://github.com/jugbeep/LvlUpWorkouts/blob/master/front-end/src/assets/images/erd.jpg
-
+<br>
+img width="50%" src="https://github.com/jugbeep/LvlUpWorkouts/blob/master/front-end/src/assets/images/erd.jpg" />
+<br>
 CONTRIBUTORS: 
 Patrick Botkins https://github.com/jugbeep
 Kevin James https://github.com/trumpetcoder
 Laura Johnson https://github.com/nemazeelaura
 Sassan Kermani https://github.com/sassankermani
 
-RPG-UpFit Elevator Pitch
-*****************************************************************************
+
+ELEVATOR PITCH
+****************************************************************************
 
 Exercise app that will allow users to battle against a dungeon and dragons' character for workout motivation. The user will pick their work out ahead of time from a slider of characters and will have special challenges along the way that they will check off at the end of their workout if they accomplish them. The user will get a status update of how they stack up against the monster and a prompt to come back again the next day. Having a monster to battle against will motivate people to work out more. Geared towards people that like video games.
 
