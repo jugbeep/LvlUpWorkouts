@@ -2,6 +2,10 @@
 db = require('../models');
 let User = db.models.User;
 
+/*=============================================
+=            sendAll not bing used            =
+=============================================*/
+
 //get all
 function sendAll(req, res) {
     User.findAll().then(function(user){
@@ -11,6 +15,13 @@ function sendAll(req, res) {
     })
 };
 
+/*=====  End of sendAll not bing used  ======*/
+
+
+/*===============================================
+=            send one not being used            =
+===============================================*/
+
 //get one
 function sendOne(req, res) {
     User.findById(req.params.id)
@@ -19,6 +30,12 @@ function sendOne(req, res) {
             else res.json(user);
         });   
 };
+
+/*=====  End of send one not being used  ======*/
+
+/*=============================================
+=            creat user being used            =
+=============================================*/
 
 //make a new user
 function create(req, res) {
@@ -48,6 +65,13 @@ function create(req, res) {
     })
 };
 
+
+/*=====  End of creat user being used  ======*/
+
+/*=============================================
+=            update not being used            =
+=============================================*/
+
 //updates user
 function update(req, res) {
     User.findById(req.params.id)
@@ -60,6 +84,12 @@ function update(req, res) {
         });
 };
 
+/*=====  End of update not being used  ======*/
+
+/*=============================================
+=            destry not being used            =
+=============================================*/
+
 //delets user
 function destroy(req, res) {
     User.findById(req.params.id)
@@ -71,6 +101,13 @@ function destroy(req, res) {
             res.send("user deleted.")
         })
 };
+
+/*=====  End of destry not being used  ======*/
+
+
+/*==============================================
+=            cheack user being used            =
+==============================================*/
 
 //cheack
 function cheack(req, res){
@@ -85,6 +122,10 @@ function cheack(req, res){
         });
     
 }
+
+/*=====  End of cheack user being used  ======*/
+
+
 
 module.exports.sendAll = sendAll;
 module.exports.sendOne = sendOne;

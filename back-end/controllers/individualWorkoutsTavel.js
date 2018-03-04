@@ -2,12 +2,23 @@
 db = require('../models');
 let IndividualWorkouts = db.models.IndividualWorkouts;
 
+
+/*==========================================
+=            sendAll not used            =
+==========================================*/
+
 //get all
 function sendAll(req, res) {
     IndividualWorkouts.findAll().then(function(individualWorkouts){
         res.json(individualWorkouts)
     })
 };
+
+/*=====  End of sendAll  ======*/
+
+/*=============================================
+=            sendOne not being used            =
+=============================================*/
 
 //get one
 function sendOne(req, res) {
@@ -18,6 +29,12 @@ function sendOne(req, res) {
         });   
 };
 
+/*=====  End of sendOne  ======*/
+
+/*=============================================
+=            create not being used            =
+=============================================*/
+
 //make a new individualWorkouts
 function create(req, res) {
     IndividualWorkouts.create(req.body).then(function(individualWorkouts){
@@ -25,6 +42,13 @@ function create(req, res) {
         else res.json(individualWorkouts);
     })
 };
+
+/*=====  End of create not being used  ======*/
+
+
+/*=============================================
+=            update not being used            =
+=============================================*/
 
 //updates individualWorkouts
 function update(req, res) {
@@ -38,6 +62,13 @@ function update(req, res) {
         })
 };
 
+/*=====  End of update not being used  ======*/
+
+
+/*=============================================
+=            destroy not bing used            =
+=============================================*/
+
 //delets individualWorkouts
 function destroy(req, res) {
     IndividualWorkouts.findById(req.params.id)
@@ -49,6 +80,9 @@ function destroy(req, res) {
             res.send("individualWorkouts deleted.")
         })
 };
+
+/*=====  End of destroy not bing used  ======*/
+
 
 
 
