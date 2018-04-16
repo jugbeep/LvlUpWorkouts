@@ -4,14 +4,12 @@ Github Link
 https://github.com/jugbeep/LvlUpWorkouts
 
 Link to Wireframe
-<br>
-img width="50%" src="https://github.com/jugbeep/LvlUpWorkouts/blob/master/front-end/src/assets/images/wireframe_png.png" />
-<br>
+https://github.com/jugbeep/LvlUpWorkouts/blob/master/front-end/src/assets/images/wireframe_png.png"
+
 
 Link to original sketch
-<br>
-img width="50%" src="https://github.com/jugbeep/LvlUpWorkouts/blob/master/front-end/src/assets/images/IMG_8638.JPG" />
-<br>
+https://github.com/jugbeep/LvlUpWorkouts/blob/master/front-end/src/assets/images/IMG_8638.JPG"
+
 
 Trello: User Stories
 https://trello.com/b/NEhMod29/rpgupfit
@@ -20,9 +18,8 @@ Link to Heroku
 http://rpg-up-fit.herokuapp.com/
 
 Link to data models ERD
-<br>
-img width="50%" src="https://github.com/jugbeep/LvlUpWorkouts/blob/master/front-end/src/assets/images/erd.jpg" />
-<br>
+https://github.com/jugbeep/LvlUpWorkouts/blob/master/front-end/src/assets/images/erd.jpg" 
+
 CONTRIBUTORS: 
 Patrick Botkins https://github.com/jugbeep
 Kevin James https://github.com/trumpetcoder
